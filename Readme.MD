@@ -40,7 +40,7 @@ Each challenge folder typically includes:
 📂 challenge-name/
  ├── README.md        # Notes about the approach, stack, and learnings
  ├── /src             # Main project code
- ├── /assets          # Static files, images, icons
+ ├── /resources          # Static files, images, icons
  └── preview.png      # Visual snapshot of the finished challenge
 ```
 
