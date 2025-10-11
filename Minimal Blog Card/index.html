@@ -4,9 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple floating card for a blog page">
+
+  <!-- Preconnect to fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Load fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+  <!-- 🧠 Preload the hero (LCP) image early -->
+  <link rel="preload" fetchpriority="high" as="image" href="./assets/Cactus.jpg" type="image/jpeg">
+
+  <!-- Load your stylesheet -->
   <link rel="stylesheet" href="./styles.css">
 
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" sizes="96x96" />
@@ -17,7 +27,7 @@
 <body>
   <div class="card-container">
     <section class="content-card">
-      <img src="./assets/Cactus.jpg">
+      <img src="./assets/Cactus.jpg" alt="Image of a small Cactus plant">
       <p class="article-icon">Design</p>
       <p class="article-title">Embracing Minimalism</p>
       <p class="article-text">From minimalist sculptures to minimalist paintings, this blog will inspire you to
