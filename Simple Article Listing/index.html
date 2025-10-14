@@ -11,42 +11,53 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
-    rel="stylesheet">
-
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;...&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;...&display=swap" rel="stylesheet">
+  </noscript>
   <title>Simple Article Listing | devChallenges.io</title>
 </head>
 
 <body>
   <main>
     <h1>We release interesting articles about technology</h1>
-    <img id="separator" src="./resources/Seperator.svg">
+    <img id="separator" src="./resources/Seperator.svg" alt="line separator of backslashes">
     <section class="article-container">
       <article class="article">
-        <img src="./resources/photo_1.png" srcset="./resources/photo_1.png 600w, ./resources/photo_1@2x.png"
-        sizes="(min-width: 800px) 10rem, 8rem" class="article-preview-image"
-        alt="Unlocking cloud computing image">
+        <picture>
+          <source media="(min-width: 800px)" srcset="./resources/photo_1@2x.png">
+          <source media="(max-width: 799px)" srcset="./resources/photo_1.png">
+          <img src="./resources/photo_1.png" loading="lazy" alt="Unlocking cloud computing image"
+            class="article-preview-image">
+        </picture>
         <div class="text-container">
-          <h3 class="article-header">Unlocking the Power of Cloud Computing: A Guide to Scalable Solutions</h3>
+          <h2 class="article-header">Unlocking the Power of Cloud Computing: A Guide to Scalable Solutions</h2>
           <p><time datetime="2024-11-12">November 12, 2024</time></p>
         </div>
       </article>
       <article class="article">
-        <img src="./resources/photo_3.png" srcset="./resources/photo_3.png 600w, ./resources/photo_3@2x.png"
-        sizes="(min-width: 800px) 10rem, 8rem"  class="article-preview-image"
-        alt="How Machine Learning is Revolutionizing Industries image">
+        <picture>
+          <source media="(min-width: 800px)" srcset="./resources/photo_3@2x.png">
+          <source media="(max-width: 799px)" srcset="./resources/photo_3.png">
+          <img src="./resources/photo_3.png" loading="lazy"
+            alt="How Machine Learning is Revolutionizing Industries image" class="article-preview-image">
+        </picture>
         <div class="text-container">
-          <h3 class="article-header">The Future of AI: How Machine Learning is Revolutionizing Industries</h3>
+          <h2 class="article-header">The Future of AI: How Machine Learning is Revolutionizing Industries</h2>
           <p class="datetime"><time datetime="2024-11-12">November 12, 2024</time></p>
         </div>
       </article>
       <article class="article">
-        <img src="./resources/photo_2@2x.png" srcset="./resources/photo_2.png 600w, ./resources/photo_2@2x.png"
-        sizes="(min-width: 800px) 10rem, 8rem"  class="article-preview-image" alt="The Impact of 5G on Business image">
+        <picture>
+          <source media="(min-width: 800px)" srcset="./resources/photo_2@2x.png">
+          <source media="(max-width: 799px)" srcset="./resources/photo_2.png">
+          <img src="./resources/photo_2.png" loading="lazy" alt="The Impact of 5G on Business image"
+            class="article-preview-image">
+        </picture>
         <div class="text-container">
-          <h3 class="article-header">The Impact of 5G on Business: How Faster Networks are Transforming the Way We Work
-          </h3>
+          <h2 class="article-header">The Impact of 5G on Business: How Faster Networks are Transforming the Way We Work
+          </h2>
           <p><time datetime="2024-11-12">November 12, 2024</time></p>
         </div>
       </article>
