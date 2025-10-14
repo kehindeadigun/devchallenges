@@ -5,7 +5,7 @@
 }
 
 :root {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body {
@@ -37,7 +37,7 @@ main {
 
 h1 {
     margin: 1rem 0;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -85,3 +85,15 @@ input[type="email"] {
     margin-top: 20px;
 }
 
+
+@media screen and (min-width: 600px) {
+    :root
+    {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+}
