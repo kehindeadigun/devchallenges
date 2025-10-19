@@ -53,17 +53,25 @@ h1 {
 }
 
 .checklist {
-    list-style: none;
-    display: grid;
-    gap: 0.6rem 0.5rem;
-    margin-top: 2rem;
-    grid-template-columns: 1fr 15fr;
-    align-items: center;
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-start;
 }
 
 .checklist li {
-    color: #52525A;
-    font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #52525A;
+  font-size: 0.875rem;
+}
+
+.done-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .reviewer-card {
