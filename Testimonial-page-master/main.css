@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    line-height: 1.8rem;
+    background-color: #FAFAF9;
+    letter-spacing: -1%;
+}
+
+main {
+    padding: 1.5rem 1rem;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.article-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    color: #FFFFFF;
+    background-color: #f6c044;
+    border-radius: 50%;
+
+    width: 2.875rem;
+    height: 2.875rem;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    margin: 0.75rem 0;
+    font-weight: 600;
+}
+
+.article-text {
+    font-size: 1.25rem;
+    color: #52525A;
+    font-weight: 400;
+    line-height: 175%;
+}
+
+.checklist {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem 0.5rem;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 15fr;
+    align-items: center;
+}
+
+.checklist li {
+    color: #52525A;
+    font-size: 0.875rem;
+}
+
+.reviewer-card {
+    background-color: #FFFFFF;
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+    border-radius: 1rem;
+    padding: 1.75rem 2.65rem;
+    max-width: 550px;
+}
+
+.review-icon-container{
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.star-rating-container{
+    list-style: none;
+    display: flex;
+    gap: 0.25rem;
+    min-width: 100px;
+}
+
+.company-logo{
+    height: 29px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.reviewer-text {
+    color: #52525A;
+}
+
+@media screen and (min-width: 700px){
+    main {
+        display: grid;
+        padding: 1.5rem 2rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .review-article {
+        grid-column: 1 / span 12;
+    }
+
+    .google-review {
+        grid-column: 5 / span 6;
+    }
+
+    .meta-review {
+        grid-column: 3 / span 6;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto;
+        padding: 15rem 4.5rem;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .review-article {
+        grid-area: 1/ 1/ -1/ span 6;
+        line-height: 2.1rem;
+    }
+
+    .google-review {
+        grid-area: 1/ 9/ span 1/ span 4;
+    }
+
+    .meta-review {
+        grid-area: 2/ 7/ span 1/ span 4;
+    }
+}
