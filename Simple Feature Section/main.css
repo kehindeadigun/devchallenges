@@ -46,6 +46,12 @@ h1 {
     width: 19.75rem;
 }
 
+.product-card:hover {
+    cursor: pointer;
+    border: 1px solid #E5E7EB;
+    transition: border 0.3s ease-in-out;
+}
+
 .card-icon {
     border-radius: 50%;
     display: grid;
