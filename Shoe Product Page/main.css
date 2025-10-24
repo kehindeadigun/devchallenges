@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 3.125%;
+    font-family: "Outfit", sans-serif;
+}
+
+
+
+/* text styles */
+
+.semibold {
+    font-weight: 600;
+}
+
+.extralight {
+    font-weight: 300;
+}
+
+
+
+/* main struture styling */
+
+main {
+    display: grid;
+    gap: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.product-image {
+    width: 100%;
+}
+
+
+
+/* product image */
+
+.product-information {
+    display: grid;
+    gap: 2.5rem;
+}
+
+
+
+/* breadcrumb list styles */
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    font-size: 0.875rem;
+}
+
+.breadcrumb li::after {
+    content: " - ";
+    margin-right: 0.25rem;
+}
+
+.breadcrumb li:last-child {
+    color: #394150;
+}
+
+.breadcrumb li:last-child::after {
+    content: ""; /* Remove trailing separator */
+}
+
+
+
+/* product article styles */
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-description {
+    line-height: 1.7rem;
+}
+
+
+
+/* product highlights styles */
+
+.highlights-header {
+    margin-bottom: 0.75rem;
+}
+
+.highlights {
+    padding-left: 1rem;
+    line-height: 2rem;
+}
+
+
+
+/* item property styles */
+
+.item-property-container {
+    background-color: #F3F4F6;
+    border-radius: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+}
+
+.item-property-header {
+    color: #D2D5DA;
+}
+
+.item-property-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.price {
+    font-size: 2rem;
+}
+
+
+/* button styles */
+
+.button {
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
+    align-items: space-between;
+    gap: 1rem;
+}
+
+.cart-button {
+    color: #FFFFFF;
+    background-color: #652CD1;
+}
+
+.wishlist-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
+
+@media screen and (min-width:800px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
