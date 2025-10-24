@@ -158,21 +158,23 @@ h1 {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* hide filled heart by default and hide hollow heart when button is hovered*/
+/* hide filled heart by default and hide hollow heart when button is hovered
 .filled-heart, .wishlist-button:hover .hollow-heart {
   display: none;
 }
 
-/* On hover — swap hearts */
+/* On hover — swap hearts 
 .wishlist-button:hover .filled-heart {
   display: block;
 }
+*/
 
 .wishlist-button:hover {
     border: 1px solid #652CD1;
     color: #652CD1;
     background-color: #F3F4F6;
 }
+
 
 .cart-button:hover {
     border: #FFFFFF;
