@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('resources/Background_image.svg');
+    background-size: cover;
+    background-color: #121826;
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    padding: min(10vh, 3rem) min(3%, 3rem);
+}
+
+h1 {
+    color: #E5E7EB;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.header-description {
+    color: #9DA3AE;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.product-cards-container {
+    margin: 3rem auto;
+    display: grid;
+    justify-content: center;
+    gap: 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #212936;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 19.75rem;
+}
+
+.card-icon {
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.yellow-backdrop {
+    background-color: #FCEED8;
+}
+
+.blue-backdrop {
+    background-color: #DEE9FC;
+}
+
+.pink-backdrop {
+    background-color: #FBE5E6;
+}
+
+.card-header {
+    color: #E5E7EB;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    color: #9DA3AE;
+    margin-bottom: 1rem;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 0.75rem;
+}
+
+@media screen and (min-width: 700px) {
+
+}
