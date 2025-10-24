@@ -21,6 +21,8 @@ h1 {
     text-align: center;
     font-weight: 600;
     font-size: 2.5rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .header-description {
@@ -33,7 +35,7 @@ h1 {
     margin: 3rem auto;
     display: grid;
     justify-content: center;
-    gap: 2rem 2rem;
+    gap: 2.2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -59,7 +61,7 @@ h1 {
     justify-content: center;
     width: 3.25rem;
     height: 3.25rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
@@ -83,7 +85,7 @@ h1 {
 }
 
 .card-description {
-    color: #9DA3AE;
+    color: #E5E7EB;
     margin-bottom: 1rem;
 }
 
