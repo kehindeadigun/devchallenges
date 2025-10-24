@@ -76,7 +76,7 @@ main {
 h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    max-width: 500px;
+    max-width: 31.25rem;
 }
 
 .product-description {
@@ -130,13 +130,17 @@ h1 {
     border-radius: 3px;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .buttons-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: start;
     align-items: space-between;
-    gap: 1rem;
-    max-width: 37.5rem;
+    gap: 1.5rem;
+    max-width: 31.25rem;
 }
 
 .cart-button {
@@ -151,7 +155,32 @@ h1 {
     gap: 0.375rem;
     border: 1px solid #000000;
     background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in-out;
 }
+
+/* hide filled heart by default and hide hollow heart when button is hovered*/
+.filled-heart, .wishlist-button:hover .hollow-heart {
+  display: none;
+}
+
+/* On hover — swap hearts */
+.wishlist-button:hover .filled-heart {
+  display: block;
+}
+
+.wishlist-button:hover {
+    border: 1px solid #652CD1;
+    color: #652CD1;
+    background-color: #F3F4F6;
+}
+
+.cart-button:hover {
+    border: #FFFFFF;
+    background-color: #3b177d;
+}
+
+
+/* media queries */
 
 @media screen and (min-width:720px) {
     main {
