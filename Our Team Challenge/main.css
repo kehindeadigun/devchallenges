@@ -195,10 +195,10 @@ h1 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 18rem);
-        align-items: center;
+        justify-content: center;
+        align-content: center;
         grid-template-areas:
             "team team one two"
             "allmembers three four five";
     }
-
 }
