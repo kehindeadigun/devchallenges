@@ -23,6 +23,9 @@ main {
     grid-template-rows: auto repeat(6, 18rem);
     justify-content: center;
     max-width: 1200px;
+    background-image: url("./resources/Background_decor.svg");
+    background-position: left top;
+    background-repeat: no-repeat;
 }
 
 /* Page Information Card */
@@ -41,7 +44,7 @@ h1 {
     padding: 2rem;
     display: grid;
     gap: 0.75rem;
-    background-size: cover;
+    min-height: 18rem;
 }
 
 .opener-text {
@@ -93,7 +96,7 @@ h1 {
         linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 100%
+        rgba(0, 0, 0, 0.6) 100%
         ), url("./resources/person_1@2x.png");
 }
 
@@ -103,7 +106,7 @@ h1 {
         linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 100%
+        rgba(0, 0, 0, 0.6) 100%
         ), url("./resources/person_2@2x.png");
 }
 
@@ -113,7 +116,7 @@ h1 {
         linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 100%
+        rgba(0, 0, 0, 0.6) 100%
         ), url("./resources/person_3@2x.png");
 }
 
@@ -123,7 +126,7 @@ h1 {
         linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 100%
+        rgba(0, 0, 0, 0.6) 100%
         ), url("./resources/person_4@2x.png");
 }
 
@@ -133,7 +136,7 @@ h1 {
         linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 100%
+        rgba(0, 0, 0, 0.6) 100%
         ), url("./resources/person_5@2x.png");
 }
 
@@ -165,7 +168,8 @@ h1 {
 
     .team-text {
         grid-area: team;
-        max-width: 90%;
+        max-width: 67%;
+        background-image: none;
     }
 
     .one {
@@ -200,5 +204,9 @@ h1 {
         grid-template-areas:
             "team team one two"
             "allmembers three four five";
+    }
+
+    .team-text {
+        max-width: 90%;
     }
 }
