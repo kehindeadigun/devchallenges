@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.header-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+header {
+    position: absolute;
+    padding-left: calc(5vw + 1.5rem);
+    top: calc(1rem + (96*100vw/640));
+    max-width: 800px;
+}
+
+main {
+    position: absolute;
+    max-width: 1280px;
+    padding-left: 5vw;
+}
+
+.cards-container {
+    display: grid;
+    column-gap: 2rem;
+    max-width: 1000px;
+}
+
+.one {
+    --process-height: 24px;
+    --header-height: 381px;
+    padding-top: clamp(500px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 30vw
+            + 3rem /*margin-top*/
+        ), 600px);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #374151;
+    font-weight: 800;
+}
+
+.header-highlight {
+    color: #6B59D0;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+
+p {
+    font-size: 1.125rem;
+}
+
+
+.purple {
+    color: #6B59D0;
+}
+
+
+.component-card {
+    max-width: 16.2rem;
+    border-left: 1px dotted #DEDDEB;
+}
+
+
+.component-image {
+    padding-left: 1.25rem;
+}
+
+
+.component-header {
+    border-left: 2px solid #6B59D0;
+    padding-left: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 2rem 0 1.25rem;
+}
+
+.component-description {
+    padding-left: 1.25rem;
+    color: #6B7280;
+    line-height: 2rem;
+}
+
+.purple-text {
+    color: #6B59D0;
+}
+
+@media screen and (min-width: 420px) {
+    .one {
+    --process-height: 24px;
+    --header-height: 381px;
+    padding-top: clamp(500px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 35vw
+            + 2rem /*margin-top*/
+        ), 700px);
+}
+}
+
+@media screen and (min-width: 500px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .component-card {
+        height: 100%;
+    }
+
+    .one, .two {
+        --process-height: 24px;
+        --header-height: 381px;
+        padding-top: clamp(390px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 40vw
+            + 2rem /*margin-top*/
+            + 0.75rem
+        ), 600px);
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100vh;
+    }
+
+    .one, .two, .three, .four {
+        --process-height: 24px;
+        --header-height: 381px;
+        padding-top: clamp(390px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 35vw
+            + 3rem /*margin-top*/
+        ), 700px);
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .one, .two, .three, .four {
+        --process-height: 24px;
+        --header-height: 381px;
+        padding-top: clamp(450px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 35vw
+            + 3rem /*margin-top*/
+        ), 700px);
+    }
+}
