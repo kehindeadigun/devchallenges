@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Simple Homepage - Alarado | devChallenges.io</title>
+  <script src="./main.js" defer></script>
+</head>
+
+<body>
+  <nav class="mobile-nav">
+    <img class="light" src="./resources/logo-light.svg" alt="alarodo logo icon">
+    <img class="dark" src="./resources/logo-dark.svg" alt="alarodo logo icon">
+    <img class="menu-button light" src="./resources/hamburger-button-light.svg" alt="hamburger menu icon light">
+    <img class="menu-button dark" src="./resources/hamburger-button-dark.svg" alt="hamburger menu icon dark">
+    <div class="select-nav">
+      <ul>
+        <li>
+          <img class="close-icon" src="./resources/close-button.svg" alt="close menu icon">
+        </li>
+        <li><a href="#" class="neutral-color">About us</a></li>
+        <li><a href="#" class="neutral-color">Product</a></li>
+        <li><a href="#" class="neutral-color">Resource</a></li>
+        <li><a href="#" class="neutral-color">Contact </a></li>
+        <li>
+          <label class="light-dark-toggle">
+            <input name="light-toggle" type="checkbox" class="mode-toggle">
+            <span class="slider">
+              <img src="./resources/Moon_fill_light.svg" class="moon-button" />
+              <img src="./resources/Sun_fill.svg" class="sun-button" />
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="web-nav">
+    <img class="light" src="./resources/logo-light.svg" alt="alarodo logo icon">
+    <img class="dark" src="./resources/logo-dark.svg" alt="alarodo logo icon">
+    <ul>
+      <li><a href="#" class="neutral-color">About us</a></li>
+      <li><a href="#" class="neutral-color">Product</a></li>
+      <li><a href="#" class="neutral-color">Resource</a></li>
+      <li><a href="#" class="neutral-color">Contact </a></li>
+    </ul>
+    <label class="light-dark-toggle">
+      <input name="light-toggle" type="checkbox" class="mode-toggle">
+      <span class="slider">
+        <img src="./resources/Moon_fill_light.svg" class="moon-button" />
+        <img src="./resources/Sun_fill.svg" class="sun-button" />
+      </span>
+    </label>
+  </nav>
+  <header>
+    <section class="header-article">
+      <p class="subtext-one">😎 Simple way to communicate</p>
+      <h1 class="neutral-color">Actions for Accessibility in Design</h1>
+      <p class="subtext-two">The fastest way to build and deploy websites with resusable components.</p>
+      <div class="button-container">
+        <button class="button">GET STARTED</button>
+        <a class="anchor-link neutral-color" href="#">Get live demo</a>
+      </div>
+      <div class="checklists-container">
+        <div class="checklist">
+          <img alt="checklist tick" src="./resources/Done_ring_round_fill.svg">
+          <p>No credit card required</p>
+        </div>
+        <div class="checklist">
+          <img alt="checklist tick" src="./resources/Done_ring_round_fill.svg">
+          <p>No software to install</p>
+        </div>
+      </div>
+    </section>
+    <div class="header-img">
+      <img alt="robot floating in space typing" src="./resources/hero-image-simple-homepage@2x.png">
+    </div>
+  </header>
+</body>
+
+</html>
