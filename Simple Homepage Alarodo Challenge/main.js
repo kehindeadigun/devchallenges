@@ -15,44 +15,54 @@ function hideMenu() {
 menuButtonToggle.forEach(ele => ele.addEventListener('click', showMenu));
 closeButton.forEach(ele => ele.addEventListener('click', hideMenu));
 
-// Toggle buttons and screen mode
+let lightMoon = "./resources/Moon_fill_light.svg";
+let darkMoon = "./resources/Moon_fill.svg";
 
-let lightMoon = "./resources/Moon_fill_light.svg"
-let darkMoon = "./resources/Moon_fill.svg"
+let lightSun = "./resources/Sun_fill_light.svg";
+let darkSun = "./resources/Sun_fill.svg";
 
-let lightSun = "./resources/Sun_fill_light.svg"
-let darkSun = "./resources/Sun_fill.svg"
 
-let modeToggle = document.querySelectorAll(".mode-toggle")
-let sunImages = document.querySelectorAll(".sun-button")
-let moonImages = document.querySelectorAll(".moon-button")
+let sunImages = document.querySelectorAll(".sun-button");
+let moonImages = document.querySelectorAll(".moon-button");
 
-function changeColorMode() {
-    let toggled = Array.from(modeToggle).some(e => e.checked);
-    if (toggled==true){
-        /*  DARK MODE */
-        sunImages.forEach(ele => ele.src = lightSun);
-        moonImages.forEach(ele => ele.src = darkMoon);
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("color-mode", "dark");
-    }
-    else {
-        /*  LIGHT MODE */
-        sunImages.forEach(ele => ele.src = darkSun);
-        moonImages.forEach(ele => ele.src = lightMoon);
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("color-mode", "light");
+let modeToggle = document.querySelectorAll(".mode-toggle");
+
+
+// set the default color mode and checkbox values
+
+function setStartupColors () {
+    let colorMode = localStorage.getItem("color-mode");
+    let toggleKnobs = document.querySelectorAll(".knob");
+    sunImages.forEach(ele => ele.src = (colorMode === "dark") ? lightSun: darkSun);
+    moonImages.forEach(ele => ele.src = (colorMode === "dark") ? darkMoon: lightMoon);
+    if (colorMode=="dark"){
+        toggleKnobs.forEach(knob => knob.style.left = "4px");
     }
 }
 
-modeToggle.forEach((ele) => ele.addEventListener("change", changeColorMode));
-window.addEventListener("DOMContentLoaded", () => {
-    let saved = localStorage.getItem("color-mode");
-    if (saved === "dark") {
-        modeToggle.forEach(ele => ele.checked = true);
-    }
-    else {
-        modeToggle.forEach(ele => ele.checked = false);
-    }
-    setTimeout(changeColorMode, 0);
-})
+document.addEventListener("DOMContentLoaded", setStartupColors);
+
+
+// Toggle buttons and screen mode
+
+function changeColorMode(event) {
+    console.log('Triggered!')
+    let currentMode = document.documentElement.getAttribute("data-theme");
+    let newMode = currentMode==="dark" ? "light": "dark";
+
+    let newState = event.target.checked;
+    modeToggle.forEach(e => e.checked = newState);
+    console.log(newState)
+    console.log(newMode)
+
+    // set images and data for light or dark mode
+    sunImages.forEach(ele => ele.src = (newMode === "dark") ? lightSun: darkSun);
+    moonImages.forEach(ele => ele.src = (newMode === "dark") ? darkMoon: lightMoon);
+
+    document.documentElement.setAttribute("data-theme", newMode);
+    localStorage.setItem("color-mode", newMode);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    modeToggle.forEach((ele) => ele.addEventListener("change", changeColorMode));
+});

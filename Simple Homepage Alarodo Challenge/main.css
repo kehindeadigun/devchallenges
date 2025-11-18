@@ -14,44 +14,10 @@
     --web-link-button: #223344;
 }
 
+
 /* LIGHT AND DARK MODE SETTINGS */
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --backdrop-color: #F2F9FE;
-        --select-nav-color: #F2F9FE;
-        --text-color: #223344;
-        --link-button: #2A4DD0;
-        --web-link-button: #223344;
-    }
-
-    .dark {
-        display: none;
-    }
-
-    .light {
-        display: block;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --backdrop-color: #111729;
-        --select-nav-color: #F2F9FE;
-        --text-color: #F2F9FE;
-        --link-button: #F2F9FE;
-        --web-link-button: #F2F9FE;
-    }
-
-    .dark {
-        display: block;
-    }
-
-    .light {
-        display: none;
-    }
-}
-
+/* LIGHT STYLES */
 [data-theme="light"] {
     --backdrop-color: #F2F9FE;
     --select-nav-color: #F2F9FE;
@@ -68,6 +34,14 @@
     display: none;
 }
 
+[data-theme="light"] input:checked + .slider .knob {
+    /* moves knob left for dark */
+    transform: translateX(36px);
+}
+
+
+/* DARK STYLES */
+
 [data-theme="dark"] {
     --backdrop-color: #111729;
     --select-nav-color: #F2F9FE;
@@ -76,13 +50,21 @@
     --web-link-button: #F2F9FE;
 }
 
+[data-theme="dark"] .light {
+    display: none;
+}
+
 [data-theme="dark"] .dark {
     display: block;
 }
 
-[data-theme="dark"] .light {
-    display: none;
+[data-theme="dark"] input:checked + .slider .knob {
+    /* moves knob right for light */
+    transform: translateX(-36px);
 }
+
+
+/* Body styles */
 
 body {
     height: 100vh;
@@ -91,6 +73,8 @@ body {
     background-color: var(--backdrop-color);
     transition: background-color 0.5s ease;
 }
+
+/* Navigation pages */
 
 .web-nav {
     display: none;
@@ -191,30 +175,16 @@ body {
     z-index: 2;
 }
 
-.slider::before {
-    content: "";
+.knob {
     position: absolute;
     height: 26px;
     width: 26px;
-    right: 4px;
     bottom: 4px;
+    right: 4px;
     background-color: #F2F9FE;
     border-radius: 50%;
     transition: all 0.4s ease;
     z-index: 1;
-}
-
-input:checked + .slider::before {
-    transform: translateX(-36px);
-}
-
-input:not(:checked) {
-    color-scheme: light;
-}
-
-
-input:checked {
-    color-scheme: dark;
 }
 
 /* Main Header Content */
@@ -306,6 +276,8 @@ p {
         padding: 1.75rem 5%;
     }
 
+    /* Navigation */
+
     .mobile-nav {
         display: none;
     }
@@ -317,6 +289,8 @@ p {
         margin-bottom: 5.75rem;
         max-width: 1200px;
     }
+
+    /* Header items */
 
     header {
         display: grid;
