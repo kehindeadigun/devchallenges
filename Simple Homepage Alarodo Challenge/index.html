@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <title>Simple Homepage - Alarado | devChallenges.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Simple Alarodo Homepage Challenge">
 
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
   <script>
-    let colorPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark": "light";
-    let colorMode = localStorage.getItem("color-mode") ? localStorage.getItem("color-mode"): colorPref;
+    let colorPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+    let colorMode = localStorage.getItem("color-mode") ? localStorage.getItem("color-mode") : colorPref;
     document.documentElement.setAttribute("data-theme", colorMode);
     localStorage.setItem("color-mode", colorMode);
   </script>
@@ -25,8 +26,8 @@
 
 <body>
   <nav class="mobile-nav">
-    <img class="light" src="./resources/logo-light.svg" alt="alarodo logo icon">
-    <img class="dark" src="./resources/logo-dark.svg" alt="alarodo logo icon">
+    <img class="light alarodo-logo" src="./resources/logo-light.svg" alt="alarodo logo icon">
+    <img class="dark alarodo-logo" src="./resources/logo-dark.svg" alt="alarodo logo icon">
     <img class="menu-button light" src="./resources/hamburger-button-light.svg" alt="hamburger menu icon light">
     <img class="menu-button dark" src="./resources/hamburger-button-dark.svg" alt="hamburger menu icon dark">
     <div class="select-nav">
@@ -34,17 +35,17 @@
         <li>
           <img class="close-icon" src="./resources/close-button.svg" alt="close menu icon">
         </li>
-        <li><a href="#" class="neutral-color">About us</a></li>
-        <li><a href="#" class="neutral-color">Product</a></li>
-        <li><a href="#" class="neutral-color">Resource</a></li>
-        <li><a href="#" class="neutral-color">Contact </a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Resource</a></li>
+        <li><a href="#">Contact </a></li>
         <li>
-          <label class="light-dark-toggle">
-            <input name="light-toggle" type="checkbox" class="mode-toggle">
+          <label for="light-toggle-mobile" class="light-dark-toggle">
+            <input name="light-toggle-mobile" type="checkbox" class="mode-toggle" id="light-toggle-mobile">
             <span class="slider">
               <span class="knob"></span>
-              <img src="./resources/Moon_fill_light.svg" class="moon-button" />
-              <img src="./resources/Sun_fill.svg" class="sun-button" />
+              <img src="./resources/Moon_fill_light.svg" class="moon-button" alt="moon theme toggle icon" />
+              <img src="./resources/Sun_fill.svg" class="sun-button" alt="sun theme toggle icon" />
             </span>
           </label>
         </li>
@@ -52,13 +53,13 @@
     </div>
   </nav>
   <nav class="web-nav">
-    <img class="light" src="./resources/logo-light.svg" alt="alarodo logo icon">
-    <img class="dark" src="./resources/logo-dark.svg" alt="alarodo logo icon">
+    <img class="light alarodo-logo" src="./resources/logo-light.svg" alt="alarodo logo icon">
+    <img class="dark alarodo-logo" src="./resources/logo-dark.svg" alt="alarodo logo icon">
     <ul>
-      <li><a href="#" class="neutral-color">About us</a></li>
-      <li><a href="#" class="neutral-color">Product</a></li>
-      <li><a href="#" class="neutral-color">Resource</a></li>
-      <li><a href="#" class="neutral-color">Contact </a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Resource</a></li>
+      <li><a href="#">Contact </a></li>
     </ul>
     <label class="light-dark-toggle">
       <input name="light-toggle" type="checkbox" class="mode-toggle">
@@ -69,30 +70,32 @@
       </span>
     </label>
   </nav>
-  <header>
-    <section class="header-article">
-      <p class="subtext-one">😎 Simple way to communicate</p>
-      <h1 class="neutral-color">Actions for Accessibility in Design</h1>
-      <p class="subtext-two">The fastest way to build and deploy websites with resusable components.</p>
-      <div class="button-container">
-        <button class="button">GET STARTED</button>
-        <a class="anchor-link neutral-color" href="#">Get live demo</a>
-      </div>
-      <div class="checklists-container">
-        <div class="checklist">
-          <img alt="checklist tick" src="./resources/Done_ring_round_fill.svg">
-          <p>No credit card required</p>
+  <main>
+    <header>
+      <section class="header-article">
+        <p class="subtext-one">😎 Simple way to communicate</p>
+        <h1>Actions for Accessibility in Design</h1>
+        <p class="subtext-two">The fastest way to build and deploy websites with resusable components.</p>
+        <div class="button-container">
+          <button class="button">GET STARTED</button>
+          <a class="anchor-link" href="#">Get live demo</a>
         </div>
-        <div class="checklist">
-          <img alt="checklist tick" src="./resources/Done_ring_round_fill.svg">
-          <p>No software to install</p>
+        <div class="checklists-container">
+          <div class="checklist">
+            <img alt="checklist tick" src="./resources/Done_ring_round_fill.svg">
+            <p>No credit card required</p>
+          </div>
+          <div class="checklist">
+            <img alt="checklist tick" src="./resources/Done_ring_round_fill.svg">
+            <p>No software to install</p>
+          </div>
         </div>
+      </section>
+      <div class="header-img">
+        <img alt="robot floating in space typing" src="./resources/hero-image-simple-homepage@2x.png">
       </div>
-    </section>
-    <div class="header-img">
-      <img alt="robot floating in space typing" src="./resources/hero-image-simple-homepage@2x.png">
-    </div>
-  </header>
+    </header>
+  </main>
 </body>
 
 </html>

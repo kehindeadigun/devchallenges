@@ -36,7 +36,7 @@ function setStartupColors () {
     sunImages.forEach(ele => ele.src = (colorMode === "dark") ? lightSun: darkSun);
     moonImages.forEach(ele => ele.src = (colorMode === "dark") ? darkMoon: lightMoon);
     if (colorMode=="dark"){
-        toggleKnobs.forEach(knob => knob.style.left = "4px");
+        toggleKnobs.forEach(knob => knob.style.left = "2px");
     }
 }
 
