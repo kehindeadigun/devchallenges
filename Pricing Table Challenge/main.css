@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+header {
+    background-color: #E5E7EB;
+    padding: 3.25rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #4D556233 1px solid;
+    background-image: url("./resources/bg-pattern.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #121826;
+}
+
+header p {
+  color: #4D5562;
+  max-width: 450px;
+}
+
+main {
+    background-color: #FFFFFF;
+    padding: 60px;
+}
+
+main {
+    padding: 60px 17%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.price-text {
+    font-weight: 600;
+    font-size: 4rem;
+}
