@@ -10,10 +10,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <script src="./main.js" defer></script>
   <link rel="stylesheet" href="main.css">
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
   <title>Pricing Table | devChallenges.io</title>
 </head>
+
 <body>
   <header>
     <h1>Pricing & Plans</h1>
@@ -21,64 +23,108 @@
   </header>
   <main>
     <section class="title-column">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul class="plan-head">
+        <li class="data-item">Website number</li>
+        <li class="data-item">Server Storage</li>
+        <li class="data-item">Database</li>
+        <li class="data-item">Unmetered Bandwidth</li>
+        <li class="data-item">SSD Disk</li>
+        <li class="data-item">VCPUS Fontworld</li>
+        <li class="data-item">Worldpress install</li>
+        <li class="data-item">Server speed</li>
+      </ul>
+    </section>
+    
+    <section class="plan-column web-extra">
+      <div class="plan-header">
+        <p class="plan-name">Free</p>
+        <h2 class="plan-price">$0</h2>
+        <p class="month-text">Per month</p>
+      </div>
+      <ul class="plan-data">
+        <li class="data-item">01</li>
+        <li class="data-item">100GB</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</div>
       </ul>
 
+      <div class="plan-footer">
+        <p class="plan-cto-text">Get Started</p>
+        <img class="plan-cto" alt="forward arrow" src="./resources/down arrow-blue.svg">
+      </div>
+
+    </section>
+
+    <section class="plan-column tab-extra">
+      <div class="plan-header">
+        <p class="plan-name">Team</p>
+        <h2 class="plan-price">$59</h2>
+        <p class="month-text">Per month</p>
+      </div>
+      <ul class="plan-data">
+        <li class="data-item">10</li>
+        <li class="data-item">500GB</li>
+        <li class="data-item">15</li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-dark.svg"></li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</li>
+        <li class="data-item">-</div>
+      </ul>
+      <div class="plan-footer">
+        <p class="plan-cto-text">Get Started</p>
+        <img class="plan-cto" alt="forward arrow" src="./resources/down arrow-blue.svg">
+      </div>
+    </section>
+
+    <section class="plan-column selected">
+      <div class="plan-header">
+        <p class="plan-name">Popular</p>
+        <h2 class="plan-price">$99</h2>
+        <p class="month-text">Per month</p>
+      </div>
+      <ul class="plan-data">
+        <li class="data-item">50</li>
+        <li class="data-item">1TB</li>
+        <li class="data-item">Unlimited</li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-white.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-white.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-white.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-white.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-white.svg"></div>
+      </ul>
+      <div class="plan-footer">
+        <p class="plan-cto-text">Get Started</p>
+        <img class="plan-cto" alt="forward arrow" src="./resources/down arrow-white.svg">
+      </div>
+    </section>
+
+     <section class="plan-column">
+      <div class="plan-header">
+        <p class="plan-name">Enterprise</p>
+        <h2 class="plan-price">$299</h2>
+        <p class="month-text">Per month</p>
+      </div>
+      <ul class="plan-data">
+        <li class="data-item">Unlimited</li>
+        <li class="data-item">Unlimited</li>
+        <li class="data-item">Unlimited</li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-dark.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-dark.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-dark.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-dark.svg"></li>
+        <li class="data-item"><img class="tick" alt="tick" src="./resources/check-dark.svg"></div>
+      </ul>
+      <div class="plan-footer">
+        <p class="plan-cto-text">Get Started</p>
+        <img class="plan-cto" alt="forward arrow" src="./resources/down arrow-blue.svg">
+      </div>
     </section>
   </main>
-  <!-- 
-      
-      
-      
-      Website number
-      
-      Server storage
-      
-      Database
-      
-      Unmetered Bandwidth
-      
-      SSD Disk
-      
-      VCPUS Fontworld
-      
-      Worldpress install
-      
-      Server speed
-      
-      Free
-      
-      $0
-      
-      Per month
-      
-      100 GB
-      
-      Get Started
-      
-      Team
-      
-      $59
-      
-      500 GB
-      
-      Popular
-      
-      $99
-      
-      1 TB
-      
-      Unlimited
-      
-      Enterprise
-      
-      $299
-  -->
-
 </body>
 
 </html>

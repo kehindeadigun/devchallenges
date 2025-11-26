@@ -6,6 +6,11 @@
 
 :root {
     font-size: 16px;
+    --heading-color: #121826;
+    --plan-text: #263FA9;
+    --month-color: #4D5562;
+    --footer-color: none;
+    --name-color: none;
 }
 
 body {
@@ -19,7 +24,7 @@ header {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
     justify-content: center;
     align-items: center;
     border-bottom: #4D556233 1px solid;
@@ -31,26 +36,164 @@ header {
 h1 {
     font-weight: 700;
     font-size: 2rem;
-    color: #121826;
+    color: var(--heading-color);
 }
 
 header p {
   color: #4D5562;
-  max-width: 450px;
+  max-width: 28.125rem;
 }
 
 main {
     background-color: #FFFFFF;
-    padding: 60px;
-}
-
-main {
-    padding: 60px 17%;
+    margin: 3.75rem 17%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    position: relative;
 }
 
-.price-text {
+.title-column {
+    padding-top: calc(60px + 6rem + 1.4rem);
+    max-width: calc(500px + 8rem);
+    min-width: 100px;
+    max-width: 400px;
+}
+
+.plan-column {
+    text-align: center;
+    max-width: calc(500px + 8rem);
+    min-width: 150px;
+    padding-top: 1.5rem;
+    border-radius: 1.5rem;
+    max-width: 400px;
+}
+
+.plan-header {
+    padding: 1.5rem auto;
+}
+
+.plan-name {
+    border-radius: 1rem;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 0.875rem;
+    padding: 0.125rem 0;
+    background-color: var(--name-color);
+}
+
+.plan-price {
+    padding-bottom: 0.5rem;
     font-weight: 600;
     font-size: 4rem;
+    color: var(--heading-color);
+}
+
+.month-text {
+    color: var(--month-color);
+}
+
+main ul {
+    margin-top: 1.375rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-head {
+    align-items: flex-start;
+}
+
+.plan-head li {
+    color: var(--heading-color);
+    padding: 1rem;
+}
+
+.plan-data li {
+    color: var(--heading-color);
+    padding: 1rem;
+}
+
+.plan-head li::after {
+    content: "";
+    display: block;
+    border: 1px solid #4D556233;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.title-column .data-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.tick {
+    width: 1rem;
+    height: auto;
+}
+
+.plan-footer {
+    padding: 1.5rem 0;
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer-color);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.plan-cto-text,
+.plan-name {
+    color: var(--plan-text);
+    font-weight: 600;
+}
+
+.plan-cto {
+    width: auto;
+    height: 1.5rem;
+}
+
+.plan-cto-text:hover, 
+.plan-cto:hover {
+    cursor: pointer;
+}
+
+.plan-column:hover,
+.plan-column.selected {
+    --heading-color: #FFFFFF;
+    --plan-text: #FFFFFF;
+    --month-color: #FFFFFF;
+    --footer-color: #d99426;
+    --name-color: #263FA9;
+    background-color: #121826;
+}
+
+.web-extra,
+.tab-extra {
+    display: none;
+}
+
+@media screen and (min-width: 850px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tab-extra {
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    main {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .web-extra {
+        display: block;
+    }
 }
