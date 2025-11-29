@@ -5,7 +5,7 @@
 }
 
 :root {
-    font-size: 13px;
+    font-size: 16px;
     --heading-color: #121826;
     --plan-text: #263FA9;
     --month-color: #4D5562;
@@ -46,28 +46,38 @@ header p {
 
 main {
     background-color: #FFFFFF;
-    margin: 3.75rem 2%;
+    margin: 3.75rem 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
 }
 
 .title-column {
-    margin-top: calc(3.75rem + 6rem + 1.4rem);
-    max-width: calc(31.25rem + 8rem);
-    min-width: 6.25rem;
-    max-width: 31.25rem;
+    margin-top: calc(2rem + 6rem + 0.5rem);
+    max-width: calc(31.25rem + 8.75rem);
+    min-width: 5rem;
     background-color: #F8FAFC;
     border-radius: 0.5rem 0 0 0.5rem;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.last {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.selected {
+    grid-column: 3/ span 1;
+    grid-row: 1 / span 1;
 }
 
 .plan-column {
     text-align: center;
-    max-width: calc(31.25rem + 8rem);
+    max-width: calc(31.25rem + 8.75rem);
     min-width: 19.375;
     padding-top: 1.5rem;
     border-radius: 1.5rem;
-    max-width: 31.25rem;
 }
 
 .plan-header {
@@ -86,7 +96,7 @@ main {
 .plan-price {
     padding-bottom: 0.5rem;
     font-weight: 600;
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: var(--heading-color);
 }
 
@@ -132,6 +142,7 @@ main ul {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+  font-weight: 600;
 }
 
 .tick {
@@ -181,13 +192,14 @@ main ul {
 }
 
 @media screen and (min-width: 800px) {
-    :root {
-        font-size: 16px;
-    }
-
     main {
         margin: 3.75rem 10%;
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .title-column {
+        min-width: 6.25rem;
+        margin-top: calc(3.75rem + 6rem + 1.4rem);
     }
 
     .plan-price {
@@ -197,10 +209,22 @@ main ul {
     .tab-extra {
         display: block;
     }
+
+    .title-column,
+    .selected,
+    .last {
+        grid-row: auto;
+        grid-column: auto;
+        grid-area: auto;
+    }
 }
 
 
 @media screen and (min-width: 1280px) {
+    :root {
+        font-size: 16px;
+    }
+
     main {
         grid-template-columns: repeat(5, 1fr);
     }
