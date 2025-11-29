@@ -5,7 +5,7 @@
 }
 
 :root {
-    font-size: 16px;
+    font-size: 13px;
     --heading-color: #121826;
     --plan-text: #263FA9;
     --month-color: #4D5562;
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    background-color: #E5E7EB;
+    background-color: #F8FAFC;
     padding: 3.25rem 0;
     text-align: center;
     display: flex;
@@ -46,26 +46,28 @@ header p {
 
 main {
     background-color: #FFFFFF;
-    margin: 3.75rem 17%;
+    margin: 3.75rem 2%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
 }
 
 .title-column {
-    padding-top: calc(60px + 6rem + 1.4rem);
-    max-width: calc(500px + 8rem);
-    min-width: 100px;
-    max-width: 400px;
+    margin-top: calc(3.75rem + 6rem + 1.4rem);
+    max-width: calc(31.25rem + 8rem);
+    min-width: 6.25rem;
+    max-width: 31.25rem;
+    background-color: #F8FAFC;
+    border-radius: 0.5rem 0 0 0.5rem;
 }
 
 .plan-column {
     text-align: center;
-    max-width: calc(500px + 8rem);
-    min-width: 150px;
+    max-width: calc(31.25rem + 8rem);
+    min-width: 19.375;
     padding-top: 1.5rem;
     border-radius: 1.5rem;
-    max-width: 400px;
+    max-width: 31.25rem;
 }
 
 .plan-header {
@@ -74,7 +76,7 @@ main {
 
 .plan-name {
     border-radius: 1rem;
-    width: 100px;
+    width: 6.25rem;
     margin: 0 auto;
     margin-bottom: 0.875rem;
     padding: 0.125rem 0;
@@ -84,7 +86,7 @@ main {
 .plan-price {
     padding-bottom: 0.5rem;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--heading-color);
 }
 
@@ -119,6 +121,7 @@ main ul {
     display: block;
     border: 1px solid #4D556233;
     position: absolute;
+    left: 0;
     z-index: 1;
     width: 100%;
     margin-top: 0.5rem;
@@ -177,9 +180,18 @@ main ul {
     display: none;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 800px) {
+    :root {
+        font-size: 16px;
+    }
+
     main {
+        margin: 3.75rem 10%;
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .plan-price {
+        font-size: 4rem;
     }
 
     .tab-extra {
