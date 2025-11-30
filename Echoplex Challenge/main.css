@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --margin-sides: max(10px, 5.565%)
+}
+
+body {
+    height: 100vh;
+    font-family: "Be Vietnam Pro", sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* BUTTON STYLES */
+
+.button {
+    border: none;
+    padding: 0.75rem 2.25rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+}
+
+.button--purple {
+    color: #FFFFFF;
+    background-color: #4138C2;
+}
+
+.button--purple:hover {
+    color: #FFFFFF;
+    background-color: #6860CE;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.button--white {
+    color: #4138C2;
+    background-color: #FFFFFF;
+    border: 1px solid #9DA3AE;
+}
+
+.button--white:hover {
+    color: #FFFFFF;
+    background-color: #6860CE;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+
+/* NAV STYLES */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem var(--margin-sides);
+}
+
+h1 {
+    font-size: min(2.25rem, 10vw);
+    font-weight: 700;
+}
+
+
+/* HEADER STYLES */
+
+header {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    margin: 0 var(--margin-sides);
+}
+
+.header__image-container img {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+.header__article > p {
+    margin: 1.5rem 0;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.button-container {
+    display: flex;
+    gap: 0.75rem;
+}
+
+
+
+/* CARD SECTION */
+
+.main {
+    margin: 6.75rem var(--margin-sides) 9rem var(--margin-sides);
+}
+
+h2 {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 400px;
+    font-size: min(2rem, 10vw);
+    font-weight: 700;
+}
+
+.card-container {
+    display: grid;
+    row-gap: 4rem;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repaet(4, 1fr);
+}
+
+.card {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__text {
+    max-width: 170px;
+    font-weight: 600;
+}
+
+.purple {
+    color: #4138C2;
+}
+
+.bg-purple {
+    background-color: #DEE9FC;
+}
+
+.green {
+    color: #5EC269;
+}
+
+.bg-green {
+    background-color: #D5FAF1;
+}
+
+.red {
+    color: #E14F62;
+}
+
+.bg-red {
+    background-color: #FBE5E6;
+}
+
+.yellow {
+    color: #E2B53E;
+}
+
+.bg-yellow {
+    background-color: #FDF9C9;
+}
+
+.orange {
+    color: #E87B35;
+}
+
+.bg-orange {
+    background-color: #FCEED8;
+}
+
+.blue {
+    color: #4E80EE;
+}
+
+.bg-blue {
+    background-color: #DEE9FC;
+}
+
+.hotpink {
+    color: #9D59EF;
+}
+
+.bg-hotpink {
+    background-color: #F1E8FD;
+}
+
+.aquamarine {
+    color: #52B3D0;
+}
+
+.bg-aquamarine {
+    background-color: #D5FAF1;
+}
+
+
+
+
+/* FOOTER SECTION */
+
+footer {
+    width: 100%;
+}
+
+.cto {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 520px;
+    background-image: url('./resources/footer_background_image@2x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cto__text {
+    color: #FFFFFF;
+    max-width: 300px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.footer-nav {
+    background-color: #121826;
+    display: flex;
+    gap: min(5%, 2rem);
+    padding: 20px 0;
+    padding-left: var(--margin-sides);
+}
+
+.footer-nav__text {
+    color: #FFFFFF;
+}
+
+
+@media screen and (min-width: 650px) {
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+
+    .card-container {
+        display: grid;
+        row-gap: 4rem;
+        justify-content: space-evenly;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repaet(2, 1fr);
+    }
+}
+
