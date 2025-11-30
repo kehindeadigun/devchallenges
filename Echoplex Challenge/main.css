@@ -5,11 +5,13 @@
 }
 
 :root {
-    --margin-sides: max(10px, 5.565%)
+    --margin-sides: max(12px, 5.565%);
+    font-size: 16px;
 }
 
 body {
     height: 100vh;
+    width: 100vw;
     font-family: "Be Vietnam Pro", sans-serif;
     display: grid;
     align-items: center;
@@ -23,7 +25,7 @@ body {
     border: none;
     padding: 0.75rem 2.25rem;
     border-radius: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .button--purple {
@@ -81,9 +83,13 @@ header {
     margin: 2rem 0;
 }
 
+.header__article {
+    max-width: 700px;
+}
+
 .header__article > p {
     margin: 1.5rem 0;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     font-weight: 300;
 }
 
@@ -100,11 +106,12 @@ header {
     margin: 6.75rem var(--margin-sides) 9rem var(--margin-sides);
 }
 
+
 h2 {
     margin: 0 auto;
     margin-bottom: 4rem;
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     font-size: min(2rem, 10vw);
     font-weight: 700;
 }
@@ -133,6 +140,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
 }
 
 .card__text {
@@ -253,6 +261,10 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
+    }
+
+    h2 {
+        max-width: 400px;
     }
 
 
