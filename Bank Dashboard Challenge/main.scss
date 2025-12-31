@@ -1,0 +1,509 @@
+$border-color: #43454D;
+$logo-height: 1.875rem;
+$border-radius: 1rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1%;
+}
+
+body {
+    height: 100%;
+    background-color: #262833;
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+}
+
+@mixin flex-container ($justify: flex-start, $align: stretch) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin item-border () {
+    border: 1px solid $border-color;
+}
+
+
+/* HEADER CONTENT */
+
+header {
+    @include flex-container(space-between);
+    padding: 1.25rem 1.5rem;
+}
+
+.logo, .profile__icon {
+    height: $logo-height;
+    width: auto;
+}
+
+
+.profile {
+    @include flex-container(center, center);
+    gap: 0.75rem;
+
+    &__icon {
+        font-weight: bold;
+    }
+}
+
+
+.profile:hover,
+.profile:hover {
+    cursor: pointer;
+}
+
+
+/* MAIN DASHBOARD CONTENT
+ ------------------------ */
+
+main {
+   border-top: 1px solid $border-color;
+   @include flex-container();
+}
+
+/* DASHBOARD NAV CONTENT */
+
+nav {
+    min-height: calc(100% - $logo-height - 2 * 1.25rem); // vh - header content - header padding
+    @include flex-container(space-between, flex-start);
+    flex-direction: column;
+    max-width: 13.75rem;
+    padding: 0.75rem;
+    border-right: 1px solid #43454D;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.nav-header {
+    @include flex-container(center, flex-start);
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.nav-section {
+    @include flex-container(center);
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.nav-title {
+    font-size: 0.75rem;
+}
+
+.nav-links {
+    @include flex-container(center);
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.nav-list-item {
+    @include flex-container(space-between, center);
+}
+
+.nav-item {
+    @include flex-container(flex-start, center);
+    column-gap: 0.625rem;
+}
+
+.nav-icon {
+    height: 1.25rem;
+    width: auto;
+}
+
+.nav-footer {
+    @include flex-container(center);
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.nav-text,
+.nav-title,
+.notif-new,
+.notif-count {
+    display: none;
+}
+
+
+
+/* MAIN DETAILS */
+/* --------------- */
+
+
+/* CARD DETAILS CONTENT */
+
+.main-details {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    row-gap: 2rem;
+}
+
+.card-details,
+.inventory-details {
+    padding: 1.5rem;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+}
+
+.detail-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+
+/* INVENTORY DETAILS CONTENT */
+
+.inventory-details {
+    @include flex-container();
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inventory-subheader {
+    @include flex-container(flex-start, center);
+    column-gap: 0.625rem;
+}
+
+.balance-card {
+    @include flex-container();
+    border-radius: $border-radius;
+    overflow: hidden;
+    width: 100%;
+}
+
+.balance-card p {
+    color: #262833;
+}
+
+
+.balance-card .card-left {
+    background-color: #E3ECE6;
+    @include flex-container();
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.balance-card .card-right {
+    background-color: #73B06F;
+    @include flex-container(flex-end, end);
+    padding: 1.25rem;
+    background-image: url("./resources/background-decor.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    flex: 1;
+}
+
+.balance-card .card-right::after {
+    content: "";
+    clear: both;
+}
+
+.balance {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.details-button {
+    border: none;
+    @include flex-container(center, center);
+    background-color: #E3ECE6;
+    border-radius: $border-radius;
+    gap: 0.625rem;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+}
+
+
+.details-button img {
+    height: 0.75rem;
+    width: auto;
+}
+
+.card-container {
+    @include flex-container(flex-start, center);
+    flex-wrap: wrap;
+    gap: 1.375rem;
+}
+
+
+.credit-card {
+    @include flex-container();
+    flex-direction: column;
+    border-radius: $border-radius;
+    overflow: hidden;
+    max-width: 20rem;
+    color: #262833;
+    flex-grow: 1;
+}
+
+.card-top {
+    @include flex-container();
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 2.5rem;
+}
+
+.card-bottom {
+    
+    padding: 1.5rem;
+}
+
+.card-top div,
+.card-bottom div {
+    @include flex-container(space-between);
+}
+
+.credit-card__empty {
+    @include flex-container(center, center);
+    border-radius: $border-radius;
+    width: 18rem;
+    height: 12.5rem;
+    border: 1px dashed #43454D;
+    cursor: pointer;
+}
+
+.card-icon {
+    height: auto;
+    width: 2.125rem;
+}
+
+.visa-icon {
+    height: auto;
+    width: 3.45rem;
+}
+
+.plus-icon {
+    height: auto;
+    width: 1.25rem;
+}
+
+.card-number {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.lightpurple {
+    background-color: #E4D6F3;
+}
+
+.darkpurple {
+    background-color: #A686C4;
+}
+
+.lightorange {
+    background-color: #F5DDC8;
+}
+
+.darkorange {
+    background-color: #E9AE79;
+}
+
+.lightgreen {
+    background-color: #E3ECE6;
+}
+
+.darkgreen {
+    background-color: #73B06F;
+}
+
+
+/* CARD USE SUMMARY CONTENT */
+
+.use-summaries {
+    @include flex-container(flex-start);
+    border-radius: $border-radius;
+    gap: 3rem;
+    border: 1px solid #43454D;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.summary-container {
+    @include flex-container(center, center);
+    column-gap: 1rem;
+}
+
+.summary-icon {
+    height: auto;
+    padding: 0.75rem;
+    border-radius: calc($border-radius/2);
+}
+
+
+.summary-price {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+/* DIVIDER LINE */
+
+.divider {
+    display: none;
+}
+
+
+/* CARD PAY DETAILS CONTENT */
+
+.card-details {
+    @include flex-container();
+    flex-direction: column;
+    gap: 2rem;
+
+    &__content {
+        @include flex-container();
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.card-data {
+    @include flex-container();
+    gap: 0.75rem;
+
+    &__title {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+
+    &__data__val {
+        font-weight: 600;
+    }
+}
+
+.ver-divider {
+    border: 1px solid #43454D;
+}
+
+.hor-divider {
+    border: 1px solid #43454D;
+}
+
+
+.card-num {
+    &__title {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 0.75rem;
+    }
+
+    &__data__val {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+}
+
+.spend-bar {
+    border-radius: $border-radius;
+    overflow: hidden;
+    height: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+.spend-bar div {
+    width: 34%;
+    height: 100%;
+}
+
+.spending-data {
+    &__title {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    &__val {
+        font-weight: 400;
+    }
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 700px) {
+    nav {
+        width: 13.75rem;
+        padding: 1.5rem;
+    }
+
+    .nav-title {
+        display: block;
+    }
+
+    .nav-text,
+    .notif-new,
+    .notif-count {
+        display: inline-block;
+    }
+
+    .notif-new {
+        font-size: 0.625rem;
+        background-color: #E4D6F3;
+        color: #262833;
+        padding: 0.125rem 0.5rem;
+        border-radius: $border-radius;
+    }
+    
+    .notif-count {
+        font-size: 0.625rem;
+        background-color: #43454D;
+        padding: 0.125rem 0.5rem;
+        border-radius: $border-radius;
+    }
+
+    .nav-header {
+        gap: 2.25rem;
+    }
+
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1024px) {
+    
+    .main-details {
+        display: grid;
+        grid-template-columns: 1fr 1px 20.75rem;
+        gap: 1.5rem;
+        grid-template-areas: "inventory span card";
+
+    }
+
+    .card-details {
+        grid-area: card;
+    }
+
+    .inventory-details {
+        grid-area: inventory;
+    }
+
+    .divider {
+        display: block;
+        border: 1px solid $border-color;
+        grid-area: span;
+    }
+}
