@@ -14,6 +14,11 @@ $border-radius: 1rem;
     letter-spacing: -1%;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
     height: 100%;
     background-color: #262833;
@@ -71,6 +76,7 @@ main {
    grid-template-areas: "nav card"
                         "nav inventory";
    align-items: start;
+   height: 100%;
 }
 
 /* DASHBOARD NAV CONTENT */
