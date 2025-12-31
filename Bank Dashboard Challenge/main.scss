@@ -210,7 +210,7 @@ nav a {
     @include flex-container();
     flex-direction: column;
     row-gap: 1rem;
-    padding: 1.25rem;
+    padding: 1.5rem;
     flex: 1;
 }
 
@@ -265,7 +265,7 @@ nav a {
     overflow: hidden;
     color: #262833;
     flex: 1 0;
-    max-width: 20rem;
+    max-width: 18rem;
     min-width: 16.5rem;
 }
 
@@ -293,7 +293,7 @@ nav a {
     border: 1px dashed #43454D;
     cursor: pointer;
     flex: 1 0 16.5rem;
-    max-width: 20rem;
+    max-width: 18rem;
 }
 
 .card-icon {
@@ -396,10 +396,11 @@ nav a {
 
     &__title {
         margin-bottom: 0.5rem;
+        font-size: 0.75rem;
         font-weight: 500;
     }
 
-    &__data__val {
+    &__val {
         font-weight: 600;
     }
 }
@@ -420,7 +421,7 @@ nav a {
         font-size: 0.75rem;
     }
 
-    &__data__val {
+    &__val {
         font-weight: 600;
         font-size: 1.25rem;
     }
