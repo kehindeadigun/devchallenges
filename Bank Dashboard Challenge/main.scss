@@ -406,11 +406,11 @@ nav a {
 }
 
 .ver-divider {
-    border: 1px solid #43454D;
+    border-left: 1px solid #43454D;
 }
 
 .hor-divider {
-    border: 1px solid #43454D;
+    border-top: 1px solid #43454D;
 }
 
 
@@ -502,12 +502,6 @@ nav a {
         grid-template-areas: "nav inventory card";
         grid-template-columns: 13.75rem 1fr 20.75rem;
         align-items: stretch;
-    }
-
-    .divider {
-        display: block;
-        border: 1px solid $border-color;
-        grid-area: span;
     }
 
     .inventory-details-container {
