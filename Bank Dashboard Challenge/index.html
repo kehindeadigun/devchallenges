@@ -122,27 +122,29 @@
 
     </nav>
 
-    <section class="main-details">
-      <section class="card-details">
+    <section class="card-details-container">
+      <div class="card-details">
         <div class="card-details__content">
           <div class="inventory-subheader">
             <h2 class="detail-title">Card Details</h2>
           </div>
-          <div class="credit-card">
-            <div class="card-top lightgreen">
-              <div>
-                <span>Shopping Card</span>
-                <img class="card-icon" alt="" src="./resources/card.svg">
+          <div class="credit-card-wrapper vertical">
+            <div class="credit-card">
+              <div class="card-top lightgreen">
+                <div>
+                  <span>Shopping Card</span>
+                  <img class="card-icon" alt="" src="./resources/card.svg">
+                </div>
+                <div>
+                  <p>NAME</p>
+                  <p>Exp 26/6</p>
+                </div>
               </div>
-              <div>
-                <p>NAME</p>
-                <p>Exp 26/6</p>
-              </div>
-            </div>
-            <div class="card-bottom darkgreen">
-              <div>
-                <span class="card-number">**** **** 7800</span>
-                <img class="visa-icon" alt="" src="./resources/visa-logo.svg">
+              <div class="card-bottom darkgreen">
+                <div>
+                  <span class="card-number">**** **** 7800</span>
+                  <img class="visa-icon" alt="" src="./resources/visa-logo.svg">
+                </div>
               </div>
             </div>
           </div>
@@ -176,9 +178,11 @@
             <p class="spending-data__val">$400 spent of $2000</p>
           </div>
         </div>
-      </section>
-      <span class="divider"></span>
-      <section class="inventory-details">
+      </div>
+    </section>
+
+    <section class="inventory-details-container">
+      <div class="inventory-details">
         <div class="inventory-subheader">
           <h2 class="detail-title">Inventory Details</h2>
         </div>
@@ -277,7 +281,7 @@
 
 
 
-      </section>
+      </div>
     </section>
 
 

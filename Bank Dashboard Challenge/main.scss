@@ -67,6 +67,10 @@ header {
 main {
    border-top: 1px solid $border-color;
    @include flex-container();
+   display: grid;
+   grid-template-areas: "nav card"
+                        "nav inventory";
+   align-items: start;
 }
 
 /* DASHBOARD NAV CONTENT */
@@ -78,6 +82,7 @@ nav {
     max-width: 13.75rem;
     padding: 0.75rem;
     border-right: 1px solid #43454D;
+    grid-area: nav;
 }
 
 nav ul {
@@ -149,17 +154,9 @@ nav a {
 
 /* CARD DETAILS CONTENT */
 
-.main-details {
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    row-gap: 2rem;
-}
-
 .card-details,
 .inventory-details {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     border: 1px solid $border-color;
     border-radius: $border-radius;
 }
@@ -172,6 +169,12 @@ nav a {
 
 
 /* INVENTORY DETAILS CONTENT */
+
+.inventory-details-container {
+    grid-area: inventory;
+    padding: 1.5rem;
+    padding-top: 0px;
+}
 
 .inventory-details {
     @include flex-container();
@@ -245,6 +248,7 @@ nav a {
     @include flex-container(flex-start, center);
     flex-wrap: wrap;
     gap: 1.375rem;
+    align-items: flex-start;
 }
 
 
@@ -253,9 +257,10 @@ nav a {
     flex-direction: column;
     border-radius: $border-radius;
     overflow: hidden;
-    max-width: 20rem;
     color: #262833;
-    flex-grow: 1;
+    flex: 1 0;
+    max-width: 20rem;
+    min-width: 16.5rem;
 }
 
 .card-top {
@@ -278,10 +283,11 @@ nav a {
 .credit-card__empty {
     @include flex-container(center, center);
     border-radius: $border-radius;
-    width: 18rem;
     height: 12.5rem;
     border: 1px dashed #43454D;
     cursor: pointer;
+    flex: 1 0 16.5rem;
+    max-width: 20rem;
 }
 
 .card-icon {
@@ -359,14 +365,12 @@ nav a {
 }
 
 
-/* DIVIDER LINE */
-
-.divider {
-    display: none;
-}
-
-
 /* CARD PAY DETAILS CONTENT */
+
+.card-details-container {
+    grid-area: card;
+    padding: 1.5rem;
+}
 
 .card-details {
     @include flex-container();
@@ -376,7 +380,7 @@ nav a {
     &__content {
         @include flex-container();
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 
@@ -485,20 +489,12 @@ nav a {
 /* MEDIA QUERIES */
 @media screen and (min-width: 1024px) {
     
-    .main-details {
+    main {
         display: grid;
-        grid-template-columns: 1fr 1px 20.75rem;
         gap: 1.5rem;
-        grid-template-areas: "inventory span card";
-
-    }
-
-    .card-details {
-        grid-area: card;
-    }
-
-    .inventory-details {
-        grid-area: inventory;
+        grid-template-areas: "nav inventory card";
+        grid-template-columns: 13.75rem 1fr 20.75rem;
+        align-items: stretch;
     }
 
     .divider {
@@ -506,4 +502,30 @@ nav a {
         border: 1px solid $border-color;
         grid-area: span;
     }
+
+    .inventory-details-container {
+        padding: 1.5rem 0 0;
+    }
+
+    .card-details-container {
+        border-left: 1px solid $border-color;
+        padding-bottom: 0;
+    }
+
+    .card-details,
+    .inventory-details {
+        padding: 1.5rem;
+        height: 100%;
+    }
+
+    .vertical {
+        height: 18rem;
+        @include flex-container(flex-end, center);
+    }
+
+    .vertical .credit-card {
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
 }

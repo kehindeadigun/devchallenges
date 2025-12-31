@@ -52,6 +52,9 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+  display: grid;
+  grid-template-areas: "nav card" "nav inventory";
+  align-items: start;
 }
 
 /* DASHBOARD NAV CONTENT */
@@ -64,6 +67,7 @@ nav {
   max-width: 13.75rem;
   padding: 0.75rem;
   border-right: 1px solid #43454D;
+  grid-area: nav;
 }
 
 nav ul {
@@ -143,17 +147,9 @@ nav a {
 /* MAIN DETAILS */
 /* --------------- */
 /* CARD DETAILS CONTENT */
-.main-details {
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  row-gap: 2rem;
-}
-
 .card-details,
 .inventory-details {
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   border: 1px solid #43454D;
   border-radius: 1rem;
 }
@@ -164,6 +160,12 @@ nav a {
 }
 
 /* INVENTORY DETAILS CONTENT */
+.inventory-details-container {
+  grid-area: inventory;
+  padding: 1.5rem;
+  padding-top: 0px;
+}
+
 .inventory-details {
   display: flex;
   justify-content: flex-start;
@@ -249,6 +251,7 @@ nav a {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.375rem;
+  align-items: flex-start;
 }
 
 .credit-card {
@@ -258,9 +261,10 @@ nav a {
   flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
-  max-width: 20rem;
   color: #262833;
-  flex-grow: 1;
+  flex: 1 0;
+  max-width: 20rem;
+  min-width: 16.5rem;
 }
 
 .card-top {
@@ -288,10 +292,11 @@ nav a {
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  width: 18rem;
   height: 12.5rem;
   border: 1px dashed #43454D;
   cursor: pointer;
+  flex: 1 0 16.5rem;
+  max-width: 20rem;
 }
 
 .card-icon {
@@ -370,12 +375,12 @@ nav a {
   font-size: 1.5rem;
 }
 
-/* DIVIDER LINE */
-.divider {
-  display: none;
+/* CARD PAY DETAILS CONTENT */
+.card-details-container {
+  grid-area: card;
+  padding: 1.5rem;
 }
 
-/* CARD PAY DETAILS CONTENT */
 .card-details {
   display: flex;
   justify-content: flex-start;
@@ -388,7 +393,7 @@ nav a {
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .card-data {
@@ -476,21 +481,38 @@ nav a {
 }
 /* MEDIA QUERIES */
 @media screen and (min-width: 1024px) {
-  .main-details {
+  main {
     display: grid;
-    grid-template-columns: 1fr 1px 20.75rem;
     gap: 1.5rem;
-    grid-template-areas: "inventory span card";
-  }
-  .card-details {
-    grid-area: card;
-  }
-  .inventory-details {
-    grid-area: inventory;
+    grid-template-areas: "nav inventory card";
+    grid-template-columns: 13.75rem 1fr 20.75rem;
+    align-items: stretch;
   }
   .divider {
     display: block;
     border: 1px solid #43454D;
     grid-area: span;
+  }
+  .inventory-details-container {
+    padding: 1.5rem 0 0;
+  }
+  .card-details-container {
+    border-left: 1px solid #43454D;
+    padding-bottom: 0;
+  }
+  .card-details,
+  .inventory-details {
+    padding: 1.5rem;
+    height: 100%;
+  }
+  .vertical {
+    height: 18rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .vertical .credit-card {
+    transform: rotate(-90deg);
+    transform-origin: center;
   }
 }/*# sourceMappingURL=main.css.map */
