@@ -54,10 +54,8 @@ header {
  ------------------------ */
 main {
   border-top: 1px solid #43454D;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
   display: grid;
+  gap: 2rem 1.5rem;
   grid-template-areas: "nav card" "nav inventory";
   align-items: start;
   height: 100%;
@@ -489,8 +487,6 @@ nav a {
 /* MEDIA QUERIES */
 @media screen and (min-width: 1024px) {
   main {
-    display: grid;
-    gap: 1.5rem;
     grid-template-areas: "nav inventory card";
     grid-template-columns: 13.75rem 1fr 20.75rem;
     align-items: stretch;
