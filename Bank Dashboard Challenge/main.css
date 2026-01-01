@@ -350,7 +350,7 @@ nav a {
 /* CARD USE SUMMARY CONTENT */
 .use-summaries {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: stretch;
   border-radius: 1rem;
   gap: 3rem;

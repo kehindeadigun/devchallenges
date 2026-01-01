@@ -344,7 +344,7 @@ nav a {
 /* CARD USE SUMMARY CONTENT */
 
 .use-summaries {
-    @include flex-container(flex-start);
+    @include flex-container(space-between);
     border-radius: $border-radius;
     gap: 3rem;
     border: 1px solid #43454D;
