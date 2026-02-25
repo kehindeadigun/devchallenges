@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+
+  <meta name="description" content="Contact Page Challenge">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+  <title>Contact Page | devChallenges.io</title>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="logo-container">
+      <img id="logo" src="./resources/Logo.svg" alt="Becv logo">
+    </div>
+    <h1>Interested in our business pricing?</h1>
+    
+    <h2>Fill out the form to view details and we'll contact you as soon as possible.</h2>
+    
+    <section class="form-container" method="POST" action="">
+      <form id="form">
+        <div class="form-elem">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Ethan Johnson">
+        </div>
+
+        <div class="form-elem">
+          <label for="email">Company Email</label>
+          <input type="email" id="email" name="email" placeholder="ethan@johnson.com">
+        </div>
+
+        <div class="form-elem">
+          <label for="company">Company Size</label>
+          <select name="company" id="company">
+            <option value="50-100 employees">50-100 employees</option>
+            <option value="50-100 employees">100-150 employees</option>
+            <option value="50-100 employees">More than 200 employees</option>
+          </select>
+        </div>
+
+        <div class="form-elem">
+          <label for="subject">Subject</label>
+          <select name="subject" id="subject">
+            <option value="Building Landing pages">Building Landing pages</option>
+            <option value="Building Progressive Web Apps">Building Progressive Web Apps</option>
+          </select>
+        </div>
+
+        <div class="form-elem">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="50-100 employees"></textarea>
+        </div>
+
+        <div class="form-elem">
+          <input type="submit" value="Contact Sales">
+        </div>
+
+      </form>
+
+    </section>
+  </main>
+</body>
+
+</html>
