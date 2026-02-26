@@ -61,7 +61,7 @@ form {
   border-radius: 1rem;
   padding: 1.5rem;
   display: grid;
-  gap: 1.5rem;
+  gap: 1.5rem 1rem;
   width: 100%;
 }
 
@@ -108,4 +108,15 @@ label {
 button {
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+@media screen and (min-width: 800px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #message-container,
+  #submit-container {
+    grid-column: 1/span 2;
+  }
 }/*# sourceMappingURL=main.css.map */
