@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+main {
+  position: relative;
+  top: -240px;
+  z-index: 1;
+}
+
+.backdrop {
+  background: url("../resources/background-image@2x.png") center/cover no-repeat;
+  height: 240px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 40px 0px;
+}
+.title__header {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.title__count {
+  color: #FFFFFF;
+  background-color: #D2D5DA;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.payment-container {
+  padding: 3.125%;
+  padding-top: 0px;
+}
+
+.payment-section {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
+}
+
+.cart-container {
+  padding: 2rem;
+  background-color: #E5E7EB;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 1.625rem;
+}
+.item__image {
+  height: 100px;
+  width: 100px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.item__image img {
+  height: auto;
+  width: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+.item__details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.item__name {
+  font-weight: 600;
+}
+.item__cost {
+  font-weight: 600;
+}
+.item__description {
+  font-weight: 400;
+}
+.item__count {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.coupon input {
+  padding: 1rem;
+  border: 1px solid #D2D5DA;
+  background-color: #E5E7EB;
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+}
+
+.cost__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cost__item {
+  display: flex;
+  justify-content: space-between;
+}
+.cost__title, .cost__value {
+  font-weight: 600;
+  color: #394150;
+}
+.cost__bold {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 600px) {
+  .payment-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact-form {
+  display: grid;
+  gap: 1.75rem 1.5rem;
+  grid-template-areas: "name name" "email email" "country postalcode" "submit submit";
+}
+.contact-form__container {
+  padding: 2rem;
+  background-color: #FFFFFF;
+}
+.contact-form__header {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.contact-form__elem {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form .name {
+  grid-area: name;
+}
+.contact-form .email {
+  grid-area: email;
+}
+.contact-form .country {
+  grid-area: country;
+}
+.contact-form .postalcode {
+  grid-area: postalcode;
+}
+.contact-form .submit {
+  grid-area: submit;
+}
+.contact-form label {
+  margin-bottom: 0.75rem;
+  color: #394150;
+}
+.contact-form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../resources/Expand_down.svg") no-repeat right 1rem center;
+}
+.contact-form input,
+.contact-form select {
+  padding: 1rem;
+  border: 1px solid #D2D5DA;
+  background-color: #E5E7EB;
+  border-radius: 0.5rem;
+}
+
+.button,
+input.button {
+  padding: 1rem;
+  color: #FFFFFF;
+  background-color: #1D1D1F;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.01);
+  background-color: rgb(53.65, 53.65, 57.35);
+}/*# sourceMappingURL=main.css.map */

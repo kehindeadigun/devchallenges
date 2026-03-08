@@ -1,0 +1,64 @@
+@use "../utils/variables";
+
+.contact-form {
+    display: grid;
+    gap: 1.75rem 1.5rem;
+    grid-template-areas: "name name"
+        "email email"
+        "country postalcode"
+        "submit submit";
+
+    &__container {
+        padding: 2rem;
+        background-color: #FFFFFF;
+    }
+
+    &__header {
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+
+    &__elem {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    .email {
+        grid-area: email;
+    }
+
+    .country {
+        grid-area: country;
+    }
+
+    .postalcode {
+        grid-area: postalcode;
+    }
+
+    .submit {
+        grid-area: submit;
+    }
+
+    label {
+        margin-bottom: 0.75rem;
+        color: variables.$dark-alt-color;
+    }
+
+    select {
+        appearance: none;
+        background: url("../resources/Expand_down.svg") no-repeat right 1rem center;
+    }
+
+    input,
+    select {
+        padding: 1rem;
+        border: 1px solid variables.$dark-grey-color;
+        background-color: variables.$grey-color;
+        border-radius: variables.$soft-radius;
+    }
+
+}
