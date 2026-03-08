@@ -86,7 +86,7 @@
 
 .coupon {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 60% 40%;
     gap: 0.5rem;
 
     input {
@@ -130,7 +130,7 @@
 
     .coupon {
         display: grid;
-        grid-template-columns: 75% 25%;
+        grid-template-columns: 70% 25%;
     }
 
 }
