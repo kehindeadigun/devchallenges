@@ -37,9 +37,10 @@ main {
 }
 .title__count {
   color: #FFFFFF;
-  background-color: #D2D5DA;
+  background-color: #1D1D1F;
   border-radius: 1rem;
   padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
 }
 
 .payment-container {
@@ -61,13 +62,19 @@ main {
   gap: 1.5rem;
 }
 
+.items-container {
+  display: grid;
+  gap: 1.625rem;
+}
+
+.divider {
+  margin-top: 0.125rem;
+}
+
 .item {
-  display: flex;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  align-items: stretch;
-  width: 100%;
-  margin-bottom: 1.625rem;
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 2rem;
 }
 .item__image {
   height: 100px;
@@ -89,20 +96,23 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 0;
 }
 .item__header {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
 }
 .item__name {
   font-weight: 600;
 }
 .item__cost {
   font-weight: 600;
+  text-align: right;
 }
 .item__description {
   font-weight: 400;
+  overflow-wrap: anywhere;
 }
 .item__count {
   display: flex;
@@ -111,9 +121,8 @@ main {
 
 .coupon {
   display: grid;
-  grid-template-columns: 75% 25%;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
 }
 .coupon input {
   padding: 1rem;
@@ -144,6 +153,10 @@ main {
   .payment-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .coupon {
+    display: grid;
+    grid-template-columns: 75% 25%;
   }
 }
 .contact-form {

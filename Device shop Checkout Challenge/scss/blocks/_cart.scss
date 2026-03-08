@@ -19,12 +19,19 @@
     gap: 1.5rem;
 }
 
+.items-container {
+    display: grid;
+    gap: 1.625rem;
+}
+
+.divider {
+    margin-top: 0.125rem;
+}
+
 .item {
-    display: flex;
-    column-gap: 2rem;
-    align-items: stretch;
-    width: 100%;
-    margin-bottom: 1.625rem;
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 2rem;
 
     &__image {
         height: 100px;
@@ -48,12 +55,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        min-width: 0;
     }
 
     &__header {
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 0.5rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
     }
 
     &__name {
@@ -62,10 +70,12 @@
 
     &__cost {
         font-weight: 600;
+        text-align: right;
     }
-
+    
     &__description {
         font-weight: 400;
+        overflow-wrap: anywhere;
     }
 
     &__count {
@@ -76,8 +86,8 @@
 
 .coupon {
     display: grid;
-    grid-template-columns: 75% 25%;
-    column-gap: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
 
     input {
         padding: 1rem;
@@ -116,6 +126,11 @@
     .payment-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coupon {
+        display: grid;
+        grid-template-columns: 75% 25%;
     }
 
 }

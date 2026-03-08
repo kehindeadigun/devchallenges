@@ -15,8 +15,9 @@
 
     &__count {
         color: #FFFFFF;
-        background-color: variables.$dark-grey-color;
+        background-color: variables.$dark-color;
         border-radius: variables.$hard-radius;
         padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
     }
 }
