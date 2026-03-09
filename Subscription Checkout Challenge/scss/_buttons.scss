@@ -1,0 +1,17 @@
+@use "./variables";
+
+.button {
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.button-secondary {
+    color: variables.$dark-navy-blue;
+    background-color: variables.$light-blue;
+}
+
+.button-primary {
+    color: variables.$white;
+    background-color: variables.$purple;
+}
