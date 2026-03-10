@@ -10,6 +10,18 @@ fieldset {
     border: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .divider {
     color: variables.$light-grey;
 }
@@ -129,7 +141,7 @@ h1 {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     &__title-description {
         color: variables.$dark-grey;
         font-size: 0.875rem;
@@ -188,16 +200,22 @@ h1 {
     }
 
     &__card input {
-        display: none;
-    }
-
-    &__card:hover {
-        border: 1px solid variables.$purple;
+        position: absolute;
+        opacity: 0;
     }
 
     &__card:has(input[type="radio"]:checked) {
         border: 1px solid variables.$purple;
         background-color: variables.$light-blue;
+    }
+
+    &__card input:focus-visible {
+        outline: 2px solid variables.$purple;
+        outline-offset: 2px;
+    }
+
+    &__card:has(input:focus-visible) {
+        border: 1px solid variables.$purple;
     }
 
     &__container {
@@ -220,6 +238,12 @@ h1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+
+    @media (hover: hover) {
+        &__card:hover {
+            border: 1px solid variables.$purple;
+        }
     }
 
 }

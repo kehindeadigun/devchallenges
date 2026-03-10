@@ -17,128 +17,133 @@
 </head>
 
 <body>
-  <form class="cost-form">
+  <main>
+    <form class="cost-form">
 
-    <fieldset class="plan">
-      <div class="plan__wrapper">
-        <div class="plan__option-container">
+      <fieldset class="plan">
+        <legend class="visually-hidden">Subscription plan</legend>
+        <div class="plan__wrapper">
+          <div class="plan__option-container">
 
-          <p class="plan__title">Starter Plan</p>
+            <p class="plan__title">Starter Plan</p>
 
-          <label class="plan__card">
-            <input type="radio" name="subplan" id="monthly-plan" value="monthly" checked>
-            <div class="plan__container">
-              <p class="plan__title">Pay monthly</p>
-              <p class="plan__description">$20/ Month/ Member</p>
-            </div>
-          </label>
+            <label class="plan__card">
+              <input type="radio" name="subplan" value="monthly" checked>
+              <div class="plan__container">
+                <p class="plan__title">Pay monthly</p>
+                <p class="plan__description">$20/ Month/ Member</p>
+              </div>
+            </label>
 
-          <label class="plan__card">
-            <input type="radio" name="subplan" id="annual-plan" value="annually">
-            <div class="plan__container">
-              <p class="plan__title">Pay Annual</p>
-              <p class="plan__description">$16/ Month/ Member</p>
-            </div>
-          </label>
+            <label class="plan__card">
+              <input type="radio" name="subplan" value="annually">
+              <div class="plan__container">
+                <p class="plan__title">Pay Annual</p>
+                <p class="plan__description">$16/ Month/ Member</p>
+              </div>
+            </label>
 
-        </div>
-
-        <hr class="divider">
-
-        <div class="plan__summary-container">
-
-          <div class="plan__summary">
-            <p>Total</p>
-            <p>$20 / Month</p>
           </div>
 
-          <article>
-            <img src="./resources/unlock-key.svg" alt="padlock icon">
-            <p>This environment is for demonstration purposes only. Please refrain from entering any actual sensitive
-              data.</p>
-          </article>
-        </div>
+          <hr class="divider">
 
-        <img class="backdrop-image" src="./resources/Checkout-background@2x.png">
-      </div>
-    </fieldset>
-    <fieldset class="billing">
-      <div class="billing__wrapper">
-        <div class="billing__header">
-          <img class="logo" src="./resources/neuralite-logo.svg" alt="neuralite logo">
-          <h1>Upgrade to Plus</h1>
-          <p class="billing__title-description">Upgrade today and take your AI-powered productivity to the next level.</p>
-        </div>
-        <div class="billing__form">
-          <div class="billing__form-item">
-            <label for="billed-to" class="billing__title">Billed to</label>
-            <input type="text" id="billed-to" name="billed-to" placeholder="Enter first & last name"
-              autocomplete="name">
-          </div>
-          <div class="billing__form-item">
+          <div class="plan__summary-container">
 
-            <p class="billing__title">Payment Details</p>
-
-            <div class="billing__option-container">
-
-              <label class="billing__card">
-                <input type="radio" name="payment-details" id="credit-card" value="credit-card" checked>
-                <div class="billing__container">
-                  <img class="billing__image" src="./resources/atm-card.svg" alt="credit card icon">
-                  <p class="billing__description">Credit Card</p>
-                </div>
-              </label>
-
-              <label class="billing__card">
-                <input type="radio" name="payment-details" id="bank-transfer" value="bank-transfer">
-                <div class="billing__container">
-                  <img class="billing__image" src="./resources/bank.svg" alt="bank icon">
-                  <p class="billing__description">Bank Transfer</p>
-                </div>
-              </label>
-
-              <label class="billing__card">
-                <input type="radio" name="payment-details" id="points" value="points">
-                <div class="billing__container">
-                  <img class="billing__image" src="./resources/point-card.svg" alt="point diamond icon">
-                  <p class="billing__description">Points</p>
-                </div>
-              </label>
-
+            <div class="plan__summary">
+              <p>Total</p>
+              <p>$20 / Month</p>
             </div>
 
-
-
+            <article>
+              <img src="./resources/unlock-key.svg" alt="padlock icon">
+              <p>This environment is for demonstration purposes only. Please refrain from entering any actual sensitive
+                data.</p>
+            </article>
           </div>
-          <div class="billing__form-item">
-            <label for="email" class="billing__title">Email Address</label>
-            <input type="text" id="email" name="email" placeholder="Enter email address" autocomplete="email">
+
+          <img class="backdrop-image" src="./resources/Checkout-background@2x.png" alt="">
+        </div>
+      </fieldset>
+      <fieldset class="billing">
+        <legend class="visually-hidden">Billing information</legend>
+        <div class="billing__wrapper">
+          <div class="billing__header">
+            <img class="logo" src="./resources/neuralite-logo.svg" alt="neuralite logo">
+            <h1>Upgrade to Plus</h1>
+            <p class="billing__title-description">Upgrade today and take your AI-powered productivity to the next level.
+            </p>
           </div>
-          <div class="billing__country-container">
+          <div class="billing__form">
             <div class="billing__form-item">
-              <label for="country" class="billing__title">Country</label>
-              <select name="country" id="country" autocomplete="country-name">
-                <option value="Finland">Finland</option>
-                <option value="Nigeria">Nigeria</option>
-                <option value="USA">USA</option>
-              </select>
+              <label for="billed-to" class="billing__title">Billed to</label>
+              <input type="text" id="billed-to" name="billed-to" placeholder="Enter first & last name"
+                autocomplete="name">
             </div>
-
             <div class="billing__form-item">
-              <label for="postalcode" class="billing__title">Postal Code</label>
-              <input type="text" id="postalcode" name="postalcode" placeholder="00270" autocomplete="postal-code">
-            </div>
 
+              <p class="billing__title">Payment Details</p>
+
+              <div class="billing__option-container">
+
+                <label class="billing__card">
+                  <input type="radio" name="payment-details" id="credit-card" value="credit-card" checked>
+                  <div class="billing__container">
+                    <img class="billing__image" src="./resources/atm-card.svg" alt="credit card icon">
+                    <p class="billing__description">Credit Card</p>
+                  </div>
+                </label>
+
+                <label class="billing__card">
+                  <input type="radio" name="payment-details" id="bank-transfer" value="bank-transfer">
+                  <div class="billing__container">
+                    <img class="billing__image" src="./resources/bank.svg" alt="bank icon">
+                    <p class="billing__description">Bank Transfer</p>
+                  </div>
+                </label>
+
+                <label class="billing__card">
+                  <input type="radio" name="payment-details" id="points" value="points">
+                  <div class="billing__container">
+                    <img class="billing__image" src="./resources/point-card.svg" alt="point diamond icon">
+                    <p class="billing__description">Points</p>
+                  </div>
+                </label>
+
+              </div>
+
+
+
+            </div>
+            <div class="billing__form-item">
+              <label for="email" class="billing__title">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter email address" autocomplete="email">
+            </div>
+            <div class="billing__country-container">
+              <div class="billing__form-item">
+                <label for="country" class="billing__title">Country</label>
+                <select name="country" id="country" autocomplete="country-name">
+                  <option value="Finland">Finland</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="USA">USA</option>
+                </select>
+              </div>
+
+              <div class="billing__form-item">
+                <label for="postalcode" class="billing__title">Postal Code</label>
+                <input type="text" id="postalcode" name="postalcode" placeholder="00270" autocomplete="postal-code">
+              </div>
+
+            </div>
+          </div>
+          <div class="billing__button-container">
+            <button class="button button-secondary">Cancel</button>
+            <button class="button button-primary">Subscribe</button>
           </div>
         </div>
-        <div class="billing__button-container">
-          <button class="button button-secondary">Cancel</button>
-          <button class="button button-primary">Subscribe</button>
-        </div>
-      </div>
-    </fieldset>
-  </form>
-  
+      </fieldset>
+    </form>
+
+  </main>
 </body>
 
 </html>

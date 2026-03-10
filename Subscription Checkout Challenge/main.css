@@ -13,7 +13,7 @@ body {
 .button {
   padding: 1rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -36,6 +36,18 @@ body {
 
 fieldset {
   border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .divider {
@@ -192,14 +204,19 @@ h1 {
   transition: all 0.2s ease-in;
 }
 .billing__card input {
-  display: none;
-}
-.billing__card:hover {
-  border: 1px solid #5425AF;
+  position: absolute;
+  opacity: 0;
 }
 .billing__card:has(input[type=radio]:checked) {
   border: 1px solid #5425AF;
   background-color: #ECE9FC;
+}
+.billing__card input:focus-visible {
+  outline: 2px solid #5425AF;
+  outline-offset: 2px;
+}
+.billing__card:has(input:focus-visible) {
+  border: 1px solid #5425AF;
 }
 .billing__container {
   display: grid;
@@ -218,6 +235,11 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+@media (hover: hover) {
+  .billing__card:hover {
+    border: 1px solid #5425AF;
+  }
 }
 
 @media screen and (min-width: 900px) {
