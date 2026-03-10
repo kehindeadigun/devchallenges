@@ -3,14 +3,14 @@
 .button {
     padding: 1rem;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .button-secondary {
     color: variables.$dark-navy-blue;
-    background-color: variables.$light-blue;
+    background-color: variables.$faded-blue;
 }
 
 .button-primary {
