@@ -41,7 +41,7 @@ fieldset {
 }
 
 .plan {
-  padding: 1.25rem;
+  padding: 1.25rem 2.5%;
   grid-area: plan;
 }
 .plan__wrapper {
@@ -120,9 +120,9 @@ fieldset {
 
 .billing {
   grid-area: billing;
+  padding: 2.5rem 2.5%;
 }
 .billing__wrapper {
-  padding: 2.5rem 5.625%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -222,15 +222,12 @@ h1 {
     grid-template-columns: 1fr 43.75%;
   }
   .plan {
-    padding: 2rem 1.5625;
+    padding: 2rem min(1.5625%, 2rem);
   }
   .plan__wrapper .backdrop-image {
     display: block;
   }
   .billing {
-    padding: 2.5rem 5.625%;
-  }
-  .billing__wrapper {
     padding: 2.5rem 5.625%;
   }
 }/*# sourceMappingURL=main.css.map */
