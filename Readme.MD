@@ -7,7 +7,7 @@ This repository is my central hub for all solutions, experiments, and projects c
 
 ## 📘 Purpose
 
-This repo isn’t just a storage space — it’s a **learning log**.  
+This repo is a **learning log**.  
 Every folder represents progress through the DevChallenges curriculum, from early responsive layouts to more advanced full-stack builds. My aim is to:
 
 - Practice **clean, reusable, and modern code**
@@ -35,13 +35,12 @@ Each challenge includes design resources, starter code, and a community of devel
 ## 🛠️ Structure
 
 Each challenge folder typically includes:
-
 ```
-📂 challenge-name/
- ├── README.md        # Notes about the approach, stack, and learnings
- ├── /src             # Main project code
- ├── /resources          # Static files, images, icons
- └── preview.png      # Visual snapshot of the finished challenge
+📂 challenge-type/       #Learning path for the project
+├──📂 challenge-name/
+    ├── /src             # Main project code
+    ├── /resources       # Static files, images, icons
+    └── preview.png      # Visual snapshot of the challenge page
 ```
 
 ---
@@ -72,7 +71,7 @@ If you’re on the same path — let’s connect, collaborate, and grow together
 - HTML, CSS, JavaScript (Core)
 - React / Next.js (Front-end)
 - Node.js / Express (Back-end)
-- TailwindCSS / Styled Components
+- TailwindCSS / Scss Styled Components
 - Vite / Webpack / Parcel
 
 ---
@@ -81,15 +80,15 @@ If you’re on the same path — let’s connect, collaborate, and grow together
 
 | Path | Status |
 |------|--------|
-| Responsive Web Developer | 🔄 In progress |
-| Front-End Developer | ⏳ Coming soon |
-| Full-Stack Developer | 🧱 Planned |
+| Responsive Web Developer | ✅ Done |
+| Front-End Developer | 🔄 In progress |
+| Full-Stack Developer | ⏳ Coming soon |
 
 ---
 
 ## 🤝 Contributions
 
-This repo is mainly for personal learning, but feedback and pull requests are always welcome!  
+This repo is mainly for personal learning, but feedback and pull requests are always welcome.
 If you’ve completed similar challenges, feel free to share ideas or alternative implementations.
 
 ---
