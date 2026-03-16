@@ -27,6 +27,7 @@ h1 {
     text-shadow: 2px 2px 0px #35383f;
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: #35383f;
+    margin-bottom: 20px;
 }
 
 .subheading {
