@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Kanit", sans-serif;
+    background-color: #404A65;
+}
+
+main {
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.75rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #ECEDF0;
+    text-shadow: 2px 2px 0px #35383f;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #35383f;
+}
+
+.subheading {
+    color: #ECEDF0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+#coin-result {
+    color: #ECEDF0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+button {
+    border: none;
+    padding: 0.5rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ECEDF0;
+    background-color: #1F6FB0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    /* Button Shadow */
+    box-shadow: 0px 4px 0px 0px #23649b;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#coin {
+    height: 160px;
+    width: auto;
+}

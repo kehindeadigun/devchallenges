@@ -24,8 +24,9 @@ It provides developers with beautifully designed tasks inspired by real-world pr
 
 You can choose between different learning paths:
 
-- 🖥️ **Responsive Web Developer** — Foundations of modern, mobile-first web design  
-- 🎨 **Front-End Developer** — API integrations, UI patterns, and advanced CSS/JS work  
+- 🖥️ **Responsive Web Developer** — Foundations of mobile-first web design with HTML, CSS, & or frameworks like Tailwind & Bootstrap
+- 🖥️ **JavaScript Developer** — Working through the fundamentals of JavaScipt like the DOM, Algorithms, Events, and Fetch API
+- 🎨 **Frontend Developer** — Working with Front End frameworks like React, Vue.js, and Svelte
 - ⚙️ **Full-Stack Developer** — Build and deploy complete applications with both front-end and back-end logic
 
 Each challenge includes design resources, starter code, and a community of developers to learn from and collaborate with.
