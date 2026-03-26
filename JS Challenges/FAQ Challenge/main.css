@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #12111F;
+    --text-color: #F2F5F9;
+    --backdrop-color: #2A2936;
+    --light-text-color: #CDD5E0;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+h1,
+h2,
+p,
+li {
+    color: var(--text-color);
+}
+
+main {
+    padding: 0px 0.75rem;
+}
+
+header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.2rem;
+    max-width: 600px;
+    color: #97A3B6;
+    opacity: 98%;
+}
+
+.title__container {
+    padding: 5rem 0px 6rem;
+    background: url("./resources/faq-title-bg.svg") no-repeat center / auto;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+header p {
+    color: #97A3B6;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.options li {
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.options li label {
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.options li:has(input:checked) {
+    background-color: rgba(205, 213, 224, 0.1);
+}
+
+.list-input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    cursor: pointer;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 810px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.75rem 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.data__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data__title p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+}
+
+.data__description {
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.active {
+    background-color: var(--backdrop-color);
+}
+
+.active .data__title p {
+    color: var(--text-color);
+}
+
+.data__toggle {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+@media screen and (min-width:840px) {
+    main {
+        padding: 0px 0px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
