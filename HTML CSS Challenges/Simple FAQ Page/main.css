@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: #F8FAFC;
+}
+
+header {
+    text-align: center;
+    padding: 3.5rem 0;
+    background-color: #FFFFFF;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+
+h2, p {
+    margin: 1.5rem 0;
+}
+
+ol, ul {
+    list-style-position: outside;
+    padding-left: 1.5rem;
+}
+
+.faq-section {
+    background-color: #F8FAFC;
+    padding: min(5%, 3rem) max(1%, 10px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+article {
+    max-width: 700px;
+    line-height: 1.5rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #4E80EE;
+    text-decoration: none;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+hr {
+  width: min(95%, 600px);
+  border: none;
+  border-top: 1px solid #D2D5DA;
+  margin: 1.6rem 0;
+}

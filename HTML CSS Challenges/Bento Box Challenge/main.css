@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    padding: 0 min(40px, 3.125%);
+}
+
+header {
+    margin: 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+p {
+    line-height: 1.7rem;
+}
+
+.logo {
+    height: 32px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    max-width: 510px;
+}
+
+.header-description {
+    text-align: center;
+    color: #52525A;
+}
+
+.card-container {
+    background-color: #F3F4F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #FFFFFF;
+    display: grid;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    height: auto;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.card-description {
+    margin-top: 0.75rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.card-image-container {
+    max-width: 500px;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+}
+
+@media screen and (min-width: 650px) {
+
+    .card-container {
+        background-color: #F3F4F6;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .card {
+        max-width: none;
+    }
+
+    .card-three,
+    .card-four,
+    .card-five {
+        grid-column: span 2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        height: 270px;
+    }
+
+    .card-four {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    .card-three .card-image, 
+    .card-four .card-image,
+    .card-five .card-image {
+        height: 90%;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .card-container {
+        background-color: #F3F4F6;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .card {
+        grid-column: span 2;
+        max-width: none;
+        display: block;
+    }
+
+    .card-three {
+        height: auto;
+    }
+
+    .card-three .card-image {
+        height: auto;
+        width: 100%;
+    }
+
+    .card-four, 
+    .card-five {
+        grid-column: span 3;
+        display: flex;
+    }
+
+    .card-four .card-description,
+    .card-five .card-description {
+        margin-bottom: 0;
+    }
+    
+}
+

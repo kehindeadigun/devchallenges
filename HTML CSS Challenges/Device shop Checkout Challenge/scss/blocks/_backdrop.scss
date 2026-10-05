@@ -1,0 +1,6 @@
+@use "../utils/variables";
+
+.backdrop {
+    background: url("../resources/background-image@2x.png") center / cover no-repeat;
+    height: variables.$header-height;
+}
