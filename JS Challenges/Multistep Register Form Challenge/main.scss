@@ -1,0 +1,246 @@
+@use "variables";
+@use "buttons";
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-color: #121826;
+}
+
+h1,
+h2,
+p,
+input {
+  color: variables.$primary-white;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+main {
+  padding: 12.5rem 0.75rem;
+}
+
+.card-wrapper {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.glow {
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #845eee;
+  opacity: 0.35;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+form {
+  padding: 0rem clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0 auto;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(
+        variables.$secondary-dark-blue,
+        variables.$secondary-dark-blue
+      )
+      padding-box,
+    linear-gradient(
+        120deg,
+        rgba(229, 231, 235, 0.5) 0.05%,
+        rgba(229, 231, 235, 0) 25.05%
+      )
+      border-box;
+}
+
+.form-step {
+  @include mixins.flex-column(2.25rem);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+  @starting-style {
+    opacity: 0; // where the fade-in starts when the step appears
+  }
+
+  & .button__primary {
+    align-self: center;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+input {
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.name-and-mail-cont {
+  display: grid;
+  gap: 1rem;
+}
+
+.name-and-mail-item {
+  @include mixins.flex-column(0.5rem);
+
+  & label,
+  & input,
+  & input::placeholder {
+    color: variables.$primary-white;
+  }
+
+  & label {
+    font-size: 0.75rem;
+  }
+
+  & input {
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid variables.$secondary-light-grey;
+    border-radius: 0.75rem;
+  }
+}
+
+.topic {
+  @include mixins.flex-column(1rem);
+
+  &__option {
+    color: variables.$primary-white;
+    background-color: variables.$secondary-dark-grey;
+    border: 1px solid variables.$secondary-light-grey;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    font-size: 0.875rem;
+    display: block;
+    cursor: pointer;
+
+    &:has(input:checked) {
+      border: 1px solid #845eee;
+      background-color: #5425af;
+    }
+
+    &:has(input:focus-visible) {
+      border: 2px solid #845eee;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.summary {
+  font-size: 1rem;
+  @include mixins.flex-column(1rem);
+
+  & > div {
+    @include mixins.flex-column(0.5rem);
+  }
+
+  &__question {
+    color: variables.$secondary-light-grey-text;
+  }
+
+  &__list {
+    @include mixins.flex-column(0.5rem);
+    list-style-position: inside;
+    padding-left: 0.5rem;
+  }
+
+  &__answer {
+    color: variables.$primary-white;
+    font-weight: 600;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+
+  &__outer-text {
+    font-size: 0.75rem;
+    font-weight: 200;
+    color: variables.$primary-white;
+  }
+
+  &__container {
+    display: flex;
+    gap: 0.375rem;
+  }
+
+  &__dot-container {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__outer-dot {
+    position: absolute;
+    display: none;
+    opacity: 1%;
+    background-color: #845eee;
+    inset: 0;
+    border-radius: 50%;
+  }
+
+  &__inner-dot {
+    background-color: variables.$secondary-dark-grey;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+  }
+
+  &__dot-container.is-highlighted {
+    .steps__outer-dot {
+      opacity: 30%;
+      display: block;
+      background-color: #845eee;
+    }
+
+    .steps__inner-dot {
+      background-color: #5425af;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    padding: 16.5625rem 0.75rem;
+  }
+}

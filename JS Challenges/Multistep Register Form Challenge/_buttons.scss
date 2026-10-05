@@ -1,0 +1,13 @@
+@use "variables";
+
+button {
+  padding: 0.75rem 2.25rem;
+}
+
+.button {
+  &__primary {
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+    color: variables.$primary-white;
+    border-radius: 38px;
+  }
+}

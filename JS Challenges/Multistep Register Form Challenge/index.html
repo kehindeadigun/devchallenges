@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      title="Multi Step Form Page"
+      content="A sample multi step form page from dev challenges JS CHallenge"
+    />
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Multi-step Register Form | devChallenges.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="card-wrapper">
+        <div class="glow" aria-hidden="true"></div>
+        <form id="multiStepForm">
+          <!-- Name and Email Block -->
+          <section class="form-step name-and-mail">
+            <h2>Register</h2>
+            <div class="form-data name-and-mail-cont">
+              <div class="name-and-mail-item">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="name-and-mail-item">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Example@gmail.com"
+                  required
+                />
+              </div>
+            </div>
+            <button type="button" class="button__primary continue">
+              Continue
+            </button>
+          </section>
+
+          <!-- Topic Checkbox Block -->
+          <section class="form-step hidden">
+            <h2 id="topic-heading">Which topics you are interested in?</h2>
+            <fieldset class="form-data topic" aria-labelledby="topic-heading">
+              <label class="topic__option">
+                <input
+                  type="checkbox"
+                  name="topic"
+                  value="Software Development"
+                />
+                <span>Software Development</span>
+              </label>
+              <label class="topic__option">
+                <input type="checkbox" name="topic" value="User Experience" />
+                <span>User Experience</span>
+              </label>
+              <label class="topic__option">
+                <input type="checkbox" name="topic" value="Graphic Design" />
+                <span>Graphic Design</span>
+              </label>
+            </fieldset>
+            <button type="button" class="button__primary continue">
+              Continue
+            </button>
+          </section>
+
+          <!-- Summary Block -->
+          <section class="form-step hidden">
+            <h2>Summary</h2>
+            <div class="form-data summary">
+              <div>
+                <p class="summary__question">
+                  Name:
+                  <span class="summary__answer" id="answer__name"
+                    ><!-- Example name:Emily Johnson--></span
+                  >
+                </p>
+                <p class="summary__question">
+                  Email:
+                  <span class="summary__answer" id="answer__email"
+                    ><!-- Example email:emily@emilyjohnsonstl.com --></span
+                  >
+                </p>
+              </div>
+              <div>
+                <p class="summary__question">Topics:</p>
+                <ul class="summary__list" id="answer__topics">
+                  <!-- Example list: <li class="summary__answer">User Experience</li> -->
+                </ul>
+              </div>
+            </div>
+
+            <button type="submit" class="button__primary submit">Submit</button>
+          </section>
+        </form>
+      </div>
+
+      <div class="steps">
+        <p class="steps__outer-text">Step 1 of 3</p>
+        <div class="steps__container">
+          <div class="steps__dot-container is-highlighted">
+            <span class="steps__outer-dot"></span>
+            <span class="steps__inner-dot"> </span>
+          </div>
+          <div class="steps__dot-container">
+            <span class="steps__outer-dot"></span>
+            <span class="steps__inner-dot"> </span>
+          </div>
+          <div class="steps__dot-container">
+            <span class="steps__outer-dot"></span>
+            <span class="steps__inner-dot"> </span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
