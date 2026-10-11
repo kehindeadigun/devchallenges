@@ -1,0 +1,128 @@
+@use "variables";
+@use "button";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  background-image: url("./resources/bg-guess-the-word.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: variables.$pure-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  background-color: #171e2f;
+  border-radius: 0.75rem;
+  max-width: 365px;
+  padding: 1.5rem;
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(#7429c6, #c951e7);
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__scrambled-word {
+    padding: 0.75rem 5rem;
+    width: 100%;
+    background-color: variables.$pure-grey;
+    font-size: 2rem;
+    letter-spacing: 15%;
+    border-radius: 0.3125rem;
+    box-shadow: 0px 4px 0px 0px #030616;
+  }
+
+  &__summary {
+    display: flex;
+    gap: 3.875rem;
+  }
+
+  &__tries {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__life-counts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+  }
+
+  &__life-count {
+    background-color: #394150;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+  }
+
+  &__inputs-cont {
+    padding: 3.25rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.375rem;
+  }
+
+  &__input {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: variables.$pure-white;
+    border: 2px solid variables.$pure-grey;
+    font-size: 1.25rem;
+    text-align: center;
+    caret-color: transparent;
+  }
+
+  &__input::placeholder {
+    color: transparent;
+  }
+
+  &__input:focus {
+    border: 2px solid #7b248a;
+    outline: none;
+  }
+
+  &__input:focus::placeholder {
+    color: variables.$pure-white;
+  }
+}
+
+.med-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.is-used {
+  background-color: #7429c6;
+}
+
+.button-container {
+  display: grid;
+  gap: 1.25rem;
+  grid-auto-flow: column;
+  justify-content: center;
+}

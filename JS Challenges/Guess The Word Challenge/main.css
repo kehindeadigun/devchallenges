@@ -1,0 +1,135 @@
+.button {
+  padding: 0.75rem 2.25rem;
+  color: #f2f5f9;
+  background-color: #c951e7;
+  filter: drop-shadow(0px 4px 0px #7b248a);
+  border-radius: 0.5rem;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #4a5567;
+  filter: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  background-image: url("./resources/bg-guess-the-word.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #f2f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  background-color: #171e2f;
+  border-radius: 0.75rem;
+  max-width: 365px;
+  padding: 1.5rem;
+}
+.game__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.game__title {
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(#7429c6, #c951e7);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.game__scrambled-word {
+  padding: 0.75rem 5rem;
+  width: 100%;
+  background-color: #4a5567;
+  font-size: 2rem;
+  letter-spacing: 15%;
+  border-radius: 0.3125rem;
+  box-shadow: 0px 4px 0px 0px #030616;
+}
+.game__summary {
+  display: flex;
+  gap: 3.875rem;
+}
+.game__tries {
+  display: flex;
+  gap: 0.5rem;
+}
+.game__life-counts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+.game__life-count {
+  background-color: #394150;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+}
+.game__inputs-cont {
+  padding: 3.25rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.375rem;
+}
+.game__input {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #f2f5f9;
+  border: 2px solid #4a5567;
+  font-size: 1.25rem;
+  text-align: center;
+  caret-color: transparent;
+}
+.game__input::-moz-placeholder {
+  color: transparent;
+}
+.game__input::placeholder {
+  color: transparent;
+}
+.game__input:focus {
+  border: 2px solid #7b248a;
+  outline: none;
+}
+.game__input:focus::-moz-placeholder {
+  color: #f2f5f9;
+}
+.game__input:focus::placeholder {
+  color: #f2f5f9;
+}
+
+.med-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.is-used {
+  background-color: #7429c6;
+}
+
+.button-container {
+  display: grid;
+  gap: 1.25rem;
+  grid-auto-flow: column;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

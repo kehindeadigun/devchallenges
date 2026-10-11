@@ -1,0 +1,16 @@
+@use "variables";
+
+.button {
+  padding: 0.75rem 2.25rem;
+  color: variables.$pure-white;
+  background-color: #c951e7;
+  filter: drop-shadow(0px 4px 0px #7b248a);
+  border-radius: 0.5rem;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: variables.$pure-grey;
+  filter: none;
+}

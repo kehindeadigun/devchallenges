@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="index.js" type="module" defer></script>
+    <title>Guess The Word Game | devChallenges.io</title>
+  </head>
+  <body>
+    <main class="game">
+      <div class="game__heading">
+        <h1 class="game__title">Word Scramble</h1>
+        <p class="game__scrambled-word">relowf</p>
+
+        <div class="game__summary">
+          <div class="game__tries">
+            <p class="med-text">Tries (4/5):</p>
+            <div class="game__life-counts">
+              <span class="game__life-count is-used"></span>
+              <span class="game__life-count is-used"></span>
+              <span class="game__life-count is-used"></span>
+              <span class="game__life-count is-used"></span>
+              <span class="game__life-count"></span>
+            </div>
+          </div>
+          <p class="game__mistakes med-text">Mistakes: a,e,w,t</p>
+        </div>
+      </div>
+
+      <form id="wordForm" class="game__inputs-cont">
+        <input
+          name="word-1"
+          class="game__input"
+          type="text"
+          placeholder="_"
+          maxlength="1"
+        />
+        <input
+          name="word-2"
+          class="game__input"
+          type="text"
+          placeholder="_"
+          maxlength="1"
+        />
+        <input
+          name="word-3"
+          class="game__input"
+          type="text"
+          placeholder="_"
+          maxlength="1"
+        />
+        <input
+          name="word-4"
+          class="game__input"
+          type="text"
+          placeholder="_"
+          maxlength="1"
+        />
+        <input
+          name="word-5"
+          class="game__input"
+          type="text"
+          placeholder="_"
+          maxlength="1"
+        />
+        <input
+          name="word-6"
+          class="game__input"
+          type="text"
+          placeholder="_"
+          maxlength="1"
+        />
+      </form>
+      <div class="button-container">
+        <button class="button random med-text">Random</button>
+        <button class="button reset med-text">Reset</button>
+      </div>
+    </main>
+  </body>
+</html>
