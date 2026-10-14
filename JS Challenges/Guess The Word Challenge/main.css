@@ -62,6 +62,7 @@ body {
   letter-spacing: 15%;
   border-radius: 0.3125rem;
   box-shadow: 0px 4px 0px 0px #030616;
+  text-align: center;
 }
 .game__summary {
   display: flex;

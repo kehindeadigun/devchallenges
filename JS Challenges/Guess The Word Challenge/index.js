@@ -2,12 +2,15 @@ import { getRandomNumber, generateWord, scrambleWord } from "./helper.js";
 
 const maxWordLength = 7;
 const maxDifficulty = 3;
+const maxTries = 5;
 const randomButton = document.querySelector("button.random");
 const resetButton = document.querySelector("button.reset");
 const wordForm = document.getElementById("wordForm");
 const inputs = document.querySelectorAll(".game__input");
-
+const tryCount = document.querySelector(".game__tries > .med-text");
 const displayedWord = document.querySelector(".game__scrambled-word");
+const countIndicators = document.querySelectorAll(".game__life-count");
+
 let generatedWord = "";
 let length = 0;
 let tries = 0;
@@ -17,12 +20,25 @@ function resetDefaults() {
   generatedWord = "flower";
   length = generatedWord.length;
   scrambledWord = "relowf";
+  tries = 0;
+  tryCount.textContent = `Tries (${tries}/5):`;
+  countIndicators.forEach((indicator) => indicator.classList.remove("is-used"));
+}
+
+function updateCounts() {
+  tryCount.textContent = `Tries (${tries}/5):`;
+  let indicatorArray = Array.from(countIndicators);
+  indicatorArray.forEach((indicator) => {
+    if (indicatorArray.indexOf(indicator) <= tries - 1) {
+      indicator.classList.add("is-used");
+    }
+  });
 }
 
 const randomizeWord = async (event) => {
   event.target.disabled = true;
   try {
-    let wordLength = getRandomNumber(maxWordLength);
+    let wordLength = getRandomNumber(maxWordLength, 3) + 1;
     generatedWord = await generateWord(wordLength, maxDifficulty);
     scrambledWord = scrambleWord(generatedWord);
     displayedWord.textContent = scrambledWord;
@@ -30,6 +46,8 @@ const randomizeWord = async (event) => {
   } finally {
     length = scrambledWord.length;
     event.target.disabled = false;
+    tries = 0;
+    updateCounts();
   }
 };
 
@@ -74,9 +92,19 @@ const checkSubmittedWord = () => {
     wordText += inputDict[key];
   }
   if (wordText === generatedWord) {
-    alert("success! You guessed the word!");
+    alert(
+      "Success! You guessed the word! Click Random button to get a new word if you want to replay.",
+    );
     resetDefaults();
   } else {
-    console.log("Wrong Word!: ", wordText);
+    if (tries < maxTries - 1) {
+      console.log("Wrong Word!: ", wordText);
+      tries += 1;
+      updateCounts();
+    } else {
+      alert(
+        `Game Over! The word was ${generatedWord}. Click Random button to get a new word!`,
+      );
+    }
   }
 };
