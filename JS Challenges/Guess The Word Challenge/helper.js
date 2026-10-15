@@ -35,3 +35,13 @@ export const scrambleWord = (word) => {
   } while (scrambled === word && new Set(word).size > 1);
   return scrambled;
 };
+
+export const checkMistakenLetters = (stringA, stringB) => {
+  let mistakenWords = [];
+  for (let letter of stringA.toLowerCase()) {
+    if (stringB.toLowerCase().indexOf(letter) === -1) {
+      mistakenWords.push(letter);
+    }
+  }
+  return [...new Set(mistakenWords)];
+};
