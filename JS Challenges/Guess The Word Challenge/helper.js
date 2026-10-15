@@ -37,11 +37,11 @@ export const scrambleWord = (word) => {
 };
 
 export const checkMistakenLetters = (stringA, stringB) => {
-  let mistakenWords = [];
+  let mistakenLetters = [];
   for (let letter of stringA.toLowerCase()) {
     if (stringB.toLowerCase().indexOf(letter) === -1) {
-      mistakenWords.push(letter);
+      mistakenLetters.push(letter);
     }
   }
-  return [...new Set(mistakenWords)];
+  return [...new Set(mistakenLetters)];
 };

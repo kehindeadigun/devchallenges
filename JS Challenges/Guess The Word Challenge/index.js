@@ -58,8 +58,8 @@ function updateCounts(wordText = null) {
   let indicatorArray = Array.from(countIndicators);
 
   if (wordText) {
-    let mistakenWordsList = checkMistakenLetters(wordText, generatedWord);
-    mistakes.textContent = mistakenWordsList.join(",") || "-";
+    let mistakenLettersList = checkMistakenLetters(wordText, generatedWord);
+    mistakes.textContent = mistakenLettersList.join(",") || "-";
   }
 
   indicatorArray.forEach((indicator) => {
