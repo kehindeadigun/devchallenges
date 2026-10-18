@@ -25,48 +25,56 @@
     <title>Music Player | devChallenges.io</title>
   </head>
   <body>
-    <main class="song" aria-label="Music Player">
-      <div class="song__art-container">
-        <img
-          class="song__art"
-          src="./resources/cover-city.jpg"
-          alt="Album cover for Lost in the City Lights"
-        />
-      </div>
-      <div class="song__article">
-        <h1 class="song__title">Lost in the City Lights</h1>
-        <p class="song__artist">Cosmo Sheldrake</p>
-      </div>
-      <div class="song__audio">
-        <div class="timing__container">
-          <p class="time-text">
-            <time class="song__curr-time" datetime="PT0S">00:00</time>
-          </p>
-          <p class="time-text">
-            <time class="song__duration" datetime="PT0S">00:00</time>
-          </p>
+    <main>
+      <section class="song" aria-label="Music Player">
+        <div class="song__art-container">
+          <img
+            class="song__art"
+            src="./resources/cover-city.jpg"
+            alt="Album cover for Lost in the City Lights"
+          />
         </div>
-        <div class="seek">
-          <div class="seek__fill"></div>
-          <input type="range" min="0" value="0" aria-label="Seek" />
+        <div class="song__article">
+          <h1 class="song__title">Lost in the City Lights</h1>
+          <p class="song__artist">Cosmo Sheldrake</p>
         </div>
+        <div class="song__audio">
+          <div class="timing__container">
+            <p class="time-text">
+              <time class="song__curr-time" datetime="PT0S">00:00</time>
+            </p>
+            <p class="time-text">
+              <time class="song__duration" datetime="PT0S">00:00</time>
+            </p>
+          </div>
+          <div class="seek">
+            <div class="seek__fill"></div>
+            <input type="range" min="0" value="0" aria-label="Seek" />
+          </div>
 
-        <audio>
-          <source src="./resources/lost-in-city-lights.mp3" type="audio/mpeg" />
-          <p>Fallback text if audio will not play</p>
-        </audio>
-      </div>
-      <div class="song__player">
-        <button class="icon-container song__prev" aria-label="Previous song">
-          <img alt="" class="icon" src="./resources/prev_fill.svg" />
-        </button>
-        <button class="icon-container song__play-pause" aria-label="Play song">
-          <img alt="" class="icon" src="./resources/play_fill.svg" />
-        </button>
-        <button class="icon-container song__next" aria-label="Next song">
-          <img alt="" class="icon" src="./resources/next_fill.svg" />
-        </button>
-      </div>
+          <audio>
+            <source
+              src="./resources/lost-in-city-lights.mp3"
+              type="audio/mpeg"
+            />
+            <p>Fallback text if audio will not play</p>
+          </audio>
+        </div>
+        <div class="song__player">
+          <button class="icon-container song__prev" aria-label="Previous song">
+            <img alt="" class="icon" src="./resources/prev_fill.svg" />
+          </button>
+          <button
+            class="icon-container song__play-pause"
+            aria-label="Play song"
+          >
+            <img alt="" class="icon" src="./resources/play_fill.svg" />
+          </button>
+          <button class="icon-container song__next" aria-label="Next song">
+            <img alt="" class="icon" src="./resources/next_fill.svg" />
+          </button>
+        </div>
+      </section>
     </main>
   </body>
 </html>

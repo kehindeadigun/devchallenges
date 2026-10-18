@@ -8,12 +8,21 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  background-image: url("./resources/gradient-bg.jpg");
+  background-image: url("./resources/gradient-bg-small.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 640px) {
+  body {
+    background-image: url("./resources/gradient-bg.jpg");
+  }
+}
+
+main {
+  padding: 30px;
 }
 
 .icon-container {
@@ -93,6 +102,7 @@ body {
   height: 3.125rem;
   background-color: #c93b76;
   border-radius: 50%;
+  filter: drop-shadow(0px 8px 16px rgba(201, 59, 118, 0.25));
 }
 .song__next, .song__prev {
   width: 2rem;
