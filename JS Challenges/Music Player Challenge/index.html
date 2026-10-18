@@ -46,7 +46,11 @@
             <time class="song__duration" datetime="PT0S">00:00</time>
           </p>
         </div>
-        <input type="range" min="0" value="0" aria-label="Seek" />
+        <div class="seek">
+          <div class="seek__fill"></div>
+          <input type="range" min="0" value="0" aria-label="Seek" />
+        </div>
+
         <audio>
           <source src="./resources/lost-in-city-lights.mp3" type="audio/mpeg" />
           <p>Fallback text if audio will not play</p>

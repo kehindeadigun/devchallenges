@@ -4,7 +4,8 @@ const pausePlayButton = document.querySelector(".song__play-pause");
 const nextButton = document.querySelector(".song__next");
 const prevButton = document.querySelector(".song__prev");
 const audio = document.querySelector("audio");
-const seekBar = document.querySelector(".song__audio > input[type='range']");
+const seek = document.querySelector(".seek");
+const seekBar = document.querySelector(".seek > input[type='range']");
 
 let songs;
 let currentSong;
@@ -102,10 +103,18 @@ audio.addEventListener("loadedmetadata", (event) => {
 
 audio.addEventListener("timeupdate", (event) => {
   const songTime = document.querySelector(".song__curr-time");
+  seek.style.setProperty(
+    "--progress",
+    `${(audio.currentTime / audio.duration) * 100}%`,
+  );
   songTime.textContent = formatTimeText(audio.currentTime);
   songTime.dateTime = `PT${audio.currentTime.toFixed(2)}S`;
   seekBar.value = audio.currentTime;
   seekBar.ariaValueText = formatTimeText(audio.currentTime, true);
+  seek.style.setProperty(
+    "--progress",
+    `${(audio.currentTime / audio.duration) * 100}%`,
+  );
 });
 
 audio.addEventListener("pause", (event) => {
@@ -120,6 +129,10 @@ audio.addEventListener("ended", (event) => {
 
 seekBar.addEventListener("input", (event) => {
   audio.currentTime = event.target.value;
+  seek.style.setProperty(
+    "--progress",
+    `${(audio.currentTime / audio.duration) * 100}%`,
+  );
 });
 
 pausePlayButton.addEventListener("click", playPauseMusic);
