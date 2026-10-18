@@ -1,0 +1,120 @@
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-image: url("./resources/gradient-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mixins.flex-center();
+}
+
+.icon-container {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.song {
+  background-color: rgba(18, 24, 38, 0.6);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  max-width: 513px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__art-container {
+    width: 100%;
+    border-radius: 0.75rem;
+  }
+
+  &__art {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+  }
+
+  &__article {
+    text-align: center;
+  }
+
+  &__title {
+    color: #e5e7eb;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__artist {
+    color: #e5e7eb;
+    font-size: 0.75rem;
+    font-weight: 200;
+  }
+
+  &__audio {
+    margin-top: 0.5rem;
+    width: 100%;
+
+    & > input[type="range"] {
+      width: 100%;
+      accent-color: #c93b76;
+    }
+  }
+
+  &__player {
+    margin-top: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  &__play-pause {
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: #c93b76;
+    border-radius: 50%;
+  }
+
+  &__next,
+  &__prev {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__next:hover,
+  &__prev:hover,
+  &__next:focus-visible,
+  &__prev:focus-visible {
+    filter: invert(36%) sepia(26%) saturate(3015%) hue-rotate(305deg)
+      brightness(91%) contrast(93%);
+  }
+
+  &__player,
+  &__play-pause,
+  &__next,
+  &__prev {
+    @include mixins.flex-center();
+  }
+}
+
+.timing__container {
+  @include mixins.flex-center(space-between);
+}
+
+button.icon-container:active > .icon {
+  transform: scale(0.98);
+}
+
+.time-text {
+  font-size: 0.625rem;
+  font-weight: 200;
+  color: #e5e7eb;
+}

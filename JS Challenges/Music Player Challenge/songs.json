@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Lost in the City Lights",
+    "artist": "Cosmo Sheldrake",
+    "src": "./resources/lost-in-city-lights.mp3",
+    "cover": "./resources/cover-city.jpg",
+    "alt": "Album cover for Lost in the City Lights"
+  },
+  {
+    "name": "Forest Lullaby",
+    "artist": "Lesfm",
+    "src": "./resources/forest-lullaby.mp3",
+    "cover": "./resources/cover-forest.jpg",
+    "alt": "Album cover for Forest Lullaby"
+  }
+]
