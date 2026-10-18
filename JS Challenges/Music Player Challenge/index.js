@@ -9,10 +9,15 @@ const seekBar = document.querySelector(".song__audio > input[type='range']");
 let songs;
 let currentSong;
 
-let songsResponse = await fetch("./songs.json");
-if (songsResponse.ok) {
-  songs = await songsResponse.json();
-} else {
+try {
+  let songsResponse = await fetch("./songs.json");
+  if (songsResponse.ok) {
+    songs = await songsResponse.json();
+  } else {
+    songs = [];
+  }
+} catch (err) {
+  console.log(err);
   songs = [];
 }
 
@@ -82,7 +87,6 @@ audio.addEventListener("playing", (event) => {
   let icon = pausePlayButton.querySelector("img");
   pausePlayButton.ariaLabel = "Pause song";
   icon.src = "./resources/pause_fill.svg";
-  icon.alt = "pause button";
 });
 
 audio.addEventListener("loadedmetadata", (event) => {
@@ -92,23 +96,22 @@ audio.addEventListener("loadedmetadata", (event) => {
   seekBar.max = audio.duration;
   songTime.textContent = formatTimeText(audio.currentTime);
   songDuration.textContent = formatTimeText(audio.duration);
-  songTime.dateTime = `PT${Math.round(audio.currentTime)}S`;
-  songDuration.dateTime = `PT${Math.round(audio.duration, 3)}S`;
+  songTime.dateTime = `PT${audio.currentTime.toFixed(2)}S`;
+  songDuration.dateTime = `PT${audio.duration.toFixed(2)}S`;
 });
 
 audio.addEventListener("timeupdate", (event) => {
   const songTime = document.querySelector(".song__curr-time");
   songTime.textContent = formatTimeText(audio.currentTime);
-  songTime.dateTime = `PT${Math.round(audio.currentTime, 3)}S`;
+  songTime.dateTime = `PT${audio.currentTime.toFixed(2)}S`;
   seekBar.value = audio.currentTime;
-  seekBar.ariaValueText = formatTimeText(audio.currentTime, { fullText: true });
+  seekBar.ariaValueText = formatTimeText(audio.currentTime, true);
 });
 
 audio.addEventListener("pause", (event) => {
   let icon = pausePlayButton.querySelector("img");
   pausePlayButton.ariaLabel = "Play song";
   icon.src = "./resources/play_fill.svg";
-  icon.alt = "play button";
 });
 
 audio.addEventListener("ended", (event) => {
